@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thinkinity</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="sticky-top">
+      <nav class="navbar">
+        <a class="navbar-brand">Thinkinity</a>
+        <div class="nav-content">
+          <ul class="list-group list-group-horizontal nav-list">
+            <% if user_signed_in? %>
+              <li class="list-inline-item nav-list-item">
+              <i class="fas fa-compact-disc"></i>
+                <%= link_to "Top画面", root_path %>
+              </li>
+
+              <i class="fas fa-info"></i>
+                <%= link_to "アバウト", about_path %>
+              </li>
+
+              <li class="list-inline-item nav-list-item">
+              <i class="fas fa-user"></i>
+                <%= link_to "マイページ", user_path(current_user.id) %>
+                </%>
+              </li>
+
+              <li class="list-inline-item nav-list-item">
+              <i class="fas fa-shopping-cart"></i>
+               <%= link_to "アイデアボード", idea_boards_path %>
+              </li>
+
+              <li class="list-inline-item nav-list-item">
+
+              <li class="list-inline-item nav-list-item">
+              <i class="fas fa-sign-out-alt"></i>
+               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            <% else %>
+              <li class="list-inline-item nav-list-item">
+                <i class="fas fa-compact-disc"></i>
+                <%= link_to "ホーム", root_path %>
+              </li>
+
+              <li class="list-inline-item nav-list-item">
+                <i class="fas fa-info"></i>
+                <%= link_to "アバウト", about_path %>
+              </li>
+
+              <i class="fas fa-shopping-cart"></i>
+               <%= link_to "アイデアボード", idea_boards_path %>
+
+              <li class="list-inline-item nav-list-item">
+                <i class="fas fa-user-circle"></i>
+                <%= link_to "アカウント作成", new_user_registration_path %>
+              </li>
+
+              <li class="list-inline-item nav-list-item">
+                <i class="fas fa-sign-in-alt"></i>
+                <%= link_to "ログイン", new_user_session_path %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <%= yield %>
+
+    <footer>
+      <p class="text-right">
+      CopyRight Thinkinity.inc
+      </p>
+    </footer>
+  </body>
+</html>

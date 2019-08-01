@@ -1,0 +1,2 @@
+class IdeaBoard < ApplicationRecord
+end
