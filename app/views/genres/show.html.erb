@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row">
+		<% @genres.each do |genre| %>
+			<div class="col-3">
+				<%= link_to genre_path(genre) do %>
+					<div>
+						<%= genre.genre_symbol %>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<div class="col-9">
+			<div class="col-12">
+				<div>
+					<% @genre.idea_boards.each do |idea| %>
+						<%= link_to idea_board_path(idea) do %>
+							<div class="card idea_box shadow-sm" style="width:100%;">
+								<div class="card-head box-head">
+									<div class="row">
+										<div class="col-3">
+											<div>
+												<%= attachment_image_tag @user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image" %>
+											</div>
+										</div>
+										<div class="col-7">
+											<span class="label label-primary"><%= idea.tag_list %></span>
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<h5><%= idea.head %></h5>
+								</div>
+								<div class="card-body">
+									<%= idea.body %>
+								</div>
+							</div>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<div class="col-3">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+<div class="jumbotron mt-4">
+	<h1 class="display-4">こんにちは!</h1>
+	<p class="lead">
+		これは単純なヒーローユニット、注目のコンテンツや情報に特別な注意を喚起するためのシンプルなジャンボトロンスタイルのコンポーネント。
+	</p>
+	<hr class="my-4">
+	<p>
+		より大きなコンテナの範囲内でコンテンツに空間をあけるため、文字の体裁と空白用のユーティリティクラスを使用している。
+	</p>
+	<a class="btn btn-primary btn-lg" href="#" role="button">
+		もっと学ぼう
+	</a>
+</div>
+<div class="main_board container">
+	<div class="row">
+		<% @genres.each do |genre| %>
+		    <div class="col-3">
+	    		<%= link_to genre_path(genre) do %>
+					<h5 class="text-center">
+						<%= genre.genre_symbol %>
+					</h5>
+				<% end %>
+				<% genre.idea_boards.each do |idea| %>
+					<%= link_to idea_board_path(idea) do %>
+						<div class="card idea_box shadow-sm">
+							<div class="card-head box-head">
+								<div class="row">
+									<div class="col-5">
+										<div class="text-center">
+											<%= attachment_image_tag idea.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image" %>
+										</div>
+										<div class="text-center">
+											<%= idea.user.name %>
+										</div>
+									</div>
+									<div class="col-7">
+										<span class="label label-primary"><%= idea.tag_list %></span>
+									</div>
+								</div>
+							</div>
+							<div class="card-head">
+								<h5 class="text-center"><%= idea.head %></h5>
+							</div>
+							<div class="card-body">
+								<%= idea.body %>
+							</div>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+

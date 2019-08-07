@@ -6,16 +6,22 @@ class IdeaBoardsController < ApplicationController
 
 	def create
 		@idea_board = IdeaBoard.new(idea_board_params)
-		@idea_board.save
+		if@idea_board.save
+			redirect_to genres_path
+		else
+    		redirect_to genres_path
+    	end
 	end
 
 	def index
 		@idea_board = IdeaBoard.new
-		@idea_boards = IdeaBoard.all
+		@idea_boards = IdeaBoard.all.order(created_at: :desc)
 	end
 
 	def show
 		@idea_board = IdeaBoard.find(params[:id])
+		@comments = @idea_board.comments
+		@comment = Comment.new
 	end
 
 	def edit
@@ -34,6 +40,6 @@ class IdeaBoardsController < ApplicationController
 
 	private
 	def idea_board_params
-		params.require(:idea_board).permit(:user_id, :tag_id, :genre_id, :head, :body)
+		params.require(:idea_board).permit(:user_id, :tag_id, :genre_id, :head, :body, :tag_list)
 	end
 end
