@@ -15,7 +15,7 @@ class IdeaBoardsController < ApplicationController
 
 	def index
 		@idea_board = IdeaBoard.new
-		@idea_boards = IdeaBoard.all.order(created_at: :desc)
+		@idea_boards = IdeaBoard.page(params[:page]).per(20).order(created_at: :desc)
 	end
 
 	def show

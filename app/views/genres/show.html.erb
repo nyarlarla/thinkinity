@@ -14,7 +14,7 @@
 		<div class="col-9">
 			<div class="col-12">
 				<div>
-					<% @genre.idea_boards.each do |idea| %>
+					<% @idea_boards.each do |idea| %>
 						<%= link_to idea_board_path(idea) do %>
 							<div class="card idea_box shadow-sm" style="width:100%;">
 								<div class="card-head box-head">
@@ -38,6 +38,7 @@
 							</div>
 						<% end %>
 					<% end %>
+					<%= paginate @idea_boards %>
 				</div>
 			</div>
 		</div>

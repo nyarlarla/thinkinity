@@ -36,19 +36,6 @@
   background-color: #c0c0c0;
 }
 
-li {
-  color: black;
-}
-
-.menu{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  opacity: 0.8;
-  margin: 30px;
-  z-index:9998;
-}
-
 .idea_box{
   margin-top:20px;
 }
@@ -61,10 +48,6 @@ li {
 
 .post_idea{
   padding-right: 20px;
-}
-
-.collapse_form{
-  background-color: #4682b4;
 }
 
 .profile_image{
@@ -88,8 +71,4 @@ li {
   background-size: cover;
   background-position: center 60%;
   margin-top:0px;
-}
-
-.tag-box{
-  margin:20px 0;
 }
