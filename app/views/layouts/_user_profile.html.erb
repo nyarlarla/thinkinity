@@ -1,0 +1,24 @@
+<div class="card card-body shadow-sm" style="margin-bottom:20px;">
+	<div>
+		<table style="width:100%;">
+			<tr>
+				<td class="text-center" rowspan="2" style="width:20%;">
+					<%= attachment_image_tag current_user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image" %>
+				</td>
+				<td style="width:80%;">
+					<%= current_user.name %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= current_user.email %>
+				</td>
+			</tr>
+			<tr>
+				<td class="text-center" colspan="2">
+					<%= link_to "プロフィールを編集する", edit_user_path(current_user), class: "btn btn-success bnt-block" %>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

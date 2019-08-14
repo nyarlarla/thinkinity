@@ -11,109 +11,120 @@
 
   <body>
     <header class="sticky-top">
-      <div class="container">
-        <div class="row">
-          <h1 class="col-3">Thinkinity</h1>
-          <div class="col-7">
-            <div class="row">
-              <div class="col-10">
-                <%= search_form_for @search, url: @idea_boards_path do |f| %>
-                  <%= f.text_field :head_cont ,placeholder: '検索するテキストを入力...', class: "form-control" %>
+      <div class="header-head">
+        <div class="container">
+          <div class="row">
+            <h1 class="col-3">Thinkinity</h1>
+            <div class="col-7">
+              <div class="row" style="margin-top: 10px">
+                <div class="col-10">
+                  <%= search_form_for @search, url: idea_boards_path do |f| %>
+                    <%= f.text_field :head_cont ,placeholder: '検索するテキストを入力...', class: "form-control" %>
+                </div>
+                <div class="col-2">
+                    <%= f.submit ("検索") , class: 'btn btn-block btn-secondary'%>
+                </div>
+                  <% end %>
               </div>
-              <div class="2">
-                  <%= f.submit ("検索") , class: 'btn btn-block btn-secondary'%>
-              </div>
-                <% end %>
             </div>
-          </div>
-          <div class="col-2">
-            <button type="button" data-toggle="modal" data-backdrop="true" data-target="#modal-option" class="btn btn-block btn-primary">
-              ココを押す
-            </button>
-
+            <div class="col-2" style="margin-top: 10px">
+              <button type="button" data-toggle="modal" data-backdrop="true" data-target="#modal-option" class="btn btn-block btn-primary">
+                投稿する
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <nav class="navbar">
-        <div class="nav-content">
-          <div class="searchbox list-group list-group-horizontal nav-list">
-          <ul class="list-group list-group-horizontal nav-list">
-            <% if user_signed_in? %>
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-compact-disc"></i>
-                <%= link_to "Top画面", root_path %>
-              </li>
+      <div class="header-body">
+        <div class="container">
+          <nav class="navbar">
+            <div class="nav-content col-12">
+              <div class="searchbox list-group list-group-horizontal nav-list col-12">
+              <ul class="list-group list-group-horizontal nav-list col-12 text-center">
+                <% if user_signed_in? %>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-home"></i>
+                    <%= link_to "Top画面", root_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-info"></i>
-                <%= link_to "アバウト", about_path %>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-info"></i>
+                    <%= link_to "アバウト", about_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-user"></i>
-                <%= link_to "マイページ", user_path(current_user.id) %>
-                </%>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-user"></i>
+                    <%= link_to "マイページ", user_path(current_user.id) %>
+                    </%>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-shopping-cart"></i>
-                <%= link_to "アイデアボード", genres_path %>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-book"></i>
+                    <%= link_to "アイデアボード", idea_boards_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-sign-out-alt"></i>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-              </li>
-            <% else %>
-                <li class="list-inline-item nav-list-item">
-                <i class="fas fa-compact-disc"></i>
-                <%= link_to "ホーム", root_path %>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-lightbulb"></i>
+                    <%= link_to "新着", genres_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-info"></i>
-                <%= link_to "アバウト", about_path %>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2 right-border">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                  </li>
+                <% else %>
+                    <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-home"></i>
+                    <%= link_to "ホーム", root_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-shopping-cart"></i>
-                <%= link_to "アイデアボード", genres_path %>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-info"></i>
+                    <%= link_to "アバウト", about_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-user-circle"></i>
-                <%= link_to "アカウント作成", new_user_registration_path %>
-              </li>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-book"></i>
+                    <%= link_to "アイデアボード", idea_boards_path %>
+                  </li>
 
-              <li class="list-inline-item nav-list-item">
-                <i class="fas fa-sign-in-alt"></i>
-                <%= link_to "ログイン", new_user_session_path %>
-              </li>
-            <% end %>
-          </ul>
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-lightbulb"></i>
+                    <%= link_to "新着", genres_path %>
+                  </li>
+
+                  <li class="list-inline-item nav-list-item col-2">
+                    <i class="fas fa-user-circle"></i>
+                    <%= link_to "アカウント作成", new_user_registration_path %>
+                  </li>
+
+                  <li class="list-inline-item nav-list-item right-border col-2">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <%= link_to "ログイン", new_user_session_path %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </header>
     <div class="modal fade" id="modal-option" tabindex="-1" role="dialog" aria-labelledby="myModalOptionLabel">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <%= form_for @idea_board do |f| %>
               <div class="modal-header">
-                <h5 class="modal-title" id="myModalOptionLabel">
-                  <%= f.submit '登録', class:"btn btn-reg" %>
+                <h5 class="modal-title col-12" id="myModalOptionLabel">
+                  <%= f.submit '投稿', class:"btn btn-secondary btn-block" %>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="閉じる"><span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
                 <div class="collapse_form">
-                  <table style="width:100%" cellpadding="20">
-                    <tr>
-                      <td ></td><td >
-                      </td>
-                    </tr>
+                  <table style="width:100%">
                     <tr>
                       <td style="width:20%">
-                        <%= f.label :ジャンル, class: "badge-secondary" %>
+                        <%= f.label :ジャンル, class: "badge badge-secondary" %>
                       </td>
                       <td style="width:70%">
                         <%= f.collection_select :genre_id, Genre.all, :id, :genre_symbol, :prompt => "ジャンルを選択してください", class: "select" %>
@@ -121,21 +132,21 @@
                     </tr>
                     <tr>
                       <td>
-                        <%= f.label :tag_list, :タグ, class: "badge-secondary" %>
+                        <%= f.label :tag_list, :タグ, class: "badge badge-secondary" %>
                       </td>
                       <td>
                         <%= f.text_field :tag_list, value: @idea_board.tag_list.join(','), class: "form-control" %>
                       </td>
                     </tr>
                     <tr>
-                      <td><%= f.label :head, :タイトル, class: "badge-secondary" %></td>
+                      <td><%= f.label :head, :タイトル, class: "badge badge-secondary" %></td>
                       <td>
                         <%= f.text_field :head, class: "form-control" %>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <%= f.label :内容, class: "badge-secondary" %>
+                        <%= f.label :内容, class: "badge badge-secondary" %>
                       </td>
                       <td>
                         <%= f.text_area :body, class: "form-control" %>

@@ -1,19 +1,17 @@
 class CommentsController < ApplicationController
 	def create
-		@comment = Comment.new(comment_params)
-		@comment.user_id = current_user.id
+		@idea_board = IdeaBoard.find(params[:idea_board_id])
+		@comment = @idea_board.comments.build(comment_params)
+		@comment.user = current_user
 		if @comment.save
-	      redirect_back(fallback_location: root_path)
+	       redirect_to idea_board_path(@idea_board)
 	    else
-	      redirect_back(fallback_location: root_path)
+	       redirect_to(idea_boards_path)
 	    end
-
-  end
 	end
 
 	private
 		def comment_params
-			params.require(:comment).permit(:user_id, :idea_board_id, :text)
+			params.require(:comment).permit(:text)
 		end
-	end
 end

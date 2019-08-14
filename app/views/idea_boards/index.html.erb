@@ -1,42 +1,46 @@
-<div class="jumbotron mt-4">
-	<h1 class="display-4">こんにちは!</h1>
-	<p class="lead">
-		これは単純なヒーローユニット、注目のコンテンツや情報に特別な注意を喚起するためのシンプルなジャンボトロンスタイルのコンポーネント。
-	</p>
-	<hr class="my-4">
-	<p>
-		より大きなコンテナの範囲内でコンテンツに空間をあけるため、文字の体裁と空白用のユーティリティクラスを使用している。
-	</p>
-	<a class="btn btn-primary btn-lg" href="#" role="button">
-		もっと学ぼう
-	</a>
-</div>
-<div class="container">
-	<div>
-		<% @idea_boards.each do |idea| %>
-			<%= link_to idea_board_path(idea) do %>
-				<div class="card idea_box shadow-sm" style="width:100%;">
-					<div class="card-head box-head">
-						<div class="row">
-							<div class="col-3">
-								<div>
-									<%= attachment_image_tag idea.user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image" %>
-								</div>
-							</div>
-							<div class="col-7">
-								<span class="label label-primary"><%= idea.tag_list %></span>
-							</div>
+<div class="container" style="margin-top: 20px;">
+	<div class="row">
+		<div class="col-3">
+
+			<%= render 'layouts/user_profile' %>
+
+			<%= render 'layouts/sidebar_new' %>
+
+		</div>
+		<div class="col-9">
+			<div>
+				<% @idea_boards.each do |idea| %>
+					<div class="card idea_box shadow-sm" style="width:100%;">
+						<div class="card-head box-head">
+							<table style="width:100%;">
+								<tr>
+									<td class="text-center" rowspan="2" style="width:20%;">
+										<%= attachment_image_tag idea.user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image" %>
+									</td>
+									<td style="width:80%;">
+										<%= idea.user.name %>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="badge badge-primary"><%= idea.tag_list %>
+										</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="card-body">
+							<%= link_to idea_board_path(idea) do %>
+								<h5><%= idea.head %></h5>
+							<% end %>
+						</div>
+						<div class="card-body">
+							<%= idea.body %>
 						</div>
 					</div>
-					<div class="card-body">
-						<h5><%= idea.head %></h5>
-					</div>
-					<div class="card-body">
-						<%= idea.body %>
-					</div>
-				</div>
-			<% end %>
-		<% end %>
-		<%= paginate @idea_boards %>
+				<% end %>
+				<%= paginate @idea_boards %>
+			</div>
+		</div>
 	</div>
 </div>

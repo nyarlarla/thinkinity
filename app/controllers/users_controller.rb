@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
 def show
+      @genres = Genre.all
   	  @user = User.find(params[:id])
       @idea_boards = @user.idea_boards.page(params[:page]).per(20).order(created_at: :desc)
       @idea_board = IdeaBoard.new
@@ -23,10 +24,10 @@ def show
   end
 
   def destroy
-     user = User.find(params[:id])
-     if user.destroy
+      @user = User.find(params[:id])
+      if user.destroy
         redirect_to root_path
-     end
+      end
   end
 
 	private

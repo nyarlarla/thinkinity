@@ -4,9 +4,9 @@
 	</div>
 	<div class="row">
 		<div class="col-8">
-			<div class="card card-body tag-box shadow-sm">
+			<div class="card card-body shadow-sm">
 				<% @idea_board.tag_list.each do |tag| %>
-					<span class="label label-primary"><%= tag %></span>
+					<span class="badge badge-primary col-2"><%= tag %></span>
 				<% end %>
 			</div>
 			<div>
@@ -21,32 +21,48 @@
 					</div>
 				</div>
 
-				<div class="card">
-					<% @idea_board.comments.each do |comment| %>
+				<div class="card-head">
+				</div>
+				<div class="card card-body">
+					<%= form_for [@idea_board, @comment] do |f| %>
+						<table style="width:100%" cellpadding="20">
+					      	<tr>
+						        <td class="text-center" style="width:20%"><%= attachment_image_tag @idea_board.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image" %>
+						        </td>
+						        <td style="width:80%"><%= f.text_area :text, class: "form-control" %>
+						        </td>
+					      	</tr>
+					      	<tr>
+					      		<td class="text-center">
+					      			<%= f.submit 'コメントを投稿する', class:"btn btn-reg" %>
+					      		</td>
+					      	</tr>
+					     </table>
 					<% end %>
 				</div>
-					<div class="card-head">
-					</div>
-					<div class="card-body">
-						<%= form_for [@idea_board, @comment] do |f| %>
-							<table style="width:100%" cellpadding="20">
-						      	<tr>
-							        <td class="text-center" style="width:20%"><%= attachment_image_tag @idea_board.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image" %>
-							        </td>
-							        <td style="width:80%"><%= f.text_area :text, class: "form-control" %>
-							        </td>
-						      	</tr>
-						      	<tr>
-						      		<td class="text-center">
-						      			<%= f.submit '登録', class:"btn btn-reg" %>
-						      		</td>
-						      	</tr>
-						     </table>
-						<% end %>
-					</div>
-				</div>
 			</div>
-			<div class="col-4">
+			<% @comments.each do |comment| %>
+				<div class="card card-body">
+					<table style="width:100%" cellpadding="20">
+				      	<tr>
+					        <td class="text-center" style="width:20%"><%= attachment_image_tag comment.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image" %>
+					        </td>
+					        <td style="width:80%"><%= comment.text %>
+					        </td>
+				      	</tr>
+				      	<tr>
+				      		<td class="text-center">
+				      			<%= comment.user.name %>
+				      		</td>
+				      	</tr>
+				     </table>
+				</div>
+			<% end %>
+		</div>
+
+
+		<div class="col-4">
+			<div class="card">
 				<table cellpadding="10" style="width:100%">
 					<tr>
 						<th rowspan="2">
