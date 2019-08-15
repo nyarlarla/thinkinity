@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
 
 def show
+      @idea_board = IdeaBoard.new
       @genres = Genre.all
   	  @user = User.find(params[:id])
       @idea_boards = @user.idea_boards.page(params[:page]).per(20).order(created_at: :desc)
-      @idea_board = IdeaBoard.new
   end
 
   def edit
+      @idea_board = IdeaBoard.new
   	  @user = User.find(params[:id])
       if @user.id != current_user.id
       redirect_to root_path

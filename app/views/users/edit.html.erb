@@ -1,0 +1,34 @@
+<div class="container col-12">
+	<div class="container col-10">
+		<%= form_for(@user) do |f| %>
+			 <table border="1" bordercolor="#4682B4" cellpadding="15" style="width:100%; border-collapse:separate;">
+
+			 	<tr>
+			 		<th><%= f.label :プロフィール画像 %></th>
+            		<td><%= f.attachment_field :image %></td>
+			 	</tr>
+
+				<tr>
+					<th><%= f.label :名前 %></th>
+					<td><%= f.text_field :name, class: "form-control" %></td>
+				</tr>
+
+				<tr>
+					<th><%= f.label :メールアドレス %></th>
+			        <td><%= f.email_field :email, autofocus: true, autocomplete: "メール", class: "form-control" %></td>
+				</tr>
+
+				<tr>
+					<th><%= f.label :自己紹介 %></th>
+					<td><%= f.text_area :profile, class: "form-control" %></td>
+				</tr>
+		        <tr>
+					<td colspan="2"><%= link_to "パスワードを変更する", edit_user_registration_path, class: "btn btn-info btn-block" %></td>
+				</tr>
+				<tr>
+					<td colspan="2"><%= f.submit "変更を確定する", class: "btn btn-primary btn-block" %></td>
+				</tr>
+			</table>
+		<% end %>
+	</div>
+</div>

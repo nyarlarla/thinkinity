@@ -6,6 +6,7 @@ class IdeaBoardsController < ApplicationController
 
 	def create
 		@idea_board = IdeaBoard.new(idea_board_params)
+		@idea_board.user_id = current_user.id
 		if@idea_board.save
 			redirect_to genres_path
 		else
