@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 	devise_for :users
 	resources :users
 	resources :genres
+	get 'tags/:tag', to: 'idea_boards#index', as: :tag
 	resources :idea_boards do
 		resources :comments, only: [:create, :destroy]
 	end

@@ -17,7 +17,11 @@ class IdeaBoardsController < ApplicationController
 	def index
 		@genres = Genre.all
 		@idea_board = IdeaBoard.new
+		if params[:tag]
+		@idea_boards = IdeaBoard.tagged_with(params[:tag]).page(params[:page]).per(20).order(created_at: :desc)
+  		else
 		@idea_boards = @search_idea_boards.page(params[:page]).per(20).order(created_at: :desc)
+		end
 	end
 
 	def show

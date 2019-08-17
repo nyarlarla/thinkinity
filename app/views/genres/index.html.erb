@@ -21,7 +21,9 @@
 									</tr>
 									<tr>
 										<td>
-											<span class="badge badge-primary"><%= idea.tag_list %></span>
+											<span class="badge badge-primary">
+												<%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+											</span>
 										</td>
 									</tr>
 								</table>

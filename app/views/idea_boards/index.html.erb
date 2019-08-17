@@ -15,13 +15,16 @@
 									<td class="text-center" rowspan="2" style="width:20%;">
 										<%= attachment_image_tag idea.user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image" %>
 									</td>
-									<td style="width:80%;">
+									<td style="width:60%;">
 										<%= idea.user.name %>
+									</td>
+									<td style="width:20%">
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<span class="badge badge-primary"><%= idea.tag_list %>
+										<span class="badge badge-secondary">
+											<%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
 										</span>
 									</td>
 								</tr>
