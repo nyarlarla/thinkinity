@@ -1,0 +1,4 @@
+<% @favorites.each do |fav| %>
+	<% idea_board = IdeaBoard.find(fav.idea_board_id) %>
+		<div><%= idea_board.head %></div>
+	<% end %>

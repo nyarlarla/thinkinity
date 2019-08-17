@@ -8,4 +8,23 @@ class User < ApplicationRecord
 	has_many :comments, dependent: :destroy
 
 	attachment :image
+
+	has_many :favorites
+  	has_many :favposts, through: :favorites, source: :idea_board
+
+  	def like(idea_board)
+    favorites.find_or_create_by(idea_board_id: idea_board.id)
+  	end
+
+
+	def unlike(idea_board)
+	favorite = favorites.find_by(idea_board_id: idea_board.id)
+	favorite.destroy if favorite
+	end
+
+
+	def  favpost?(idea_board)
+	self.favposts.include?(idea_board)
+	end
+
 end
