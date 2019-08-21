@@ -51,6 +51,6 @@ class IdeaBoardsController < ApplicationController
 
 	private
 	def idea_board_params
-		params.require(:idea_board).permit(:user_id, :tag_id, :genre_id, :head, :body, :tag_list, :image_id)
+		params.require(:idea_board).permit(:user_id, :tag_id, :genre_id, :head, :body, :tag_list, :image)
 	end
 end

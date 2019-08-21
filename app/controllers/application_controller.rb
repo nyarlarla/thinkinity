@@ -10,4 +10,5 @@ class ApplicationController < ActionController::Base
 	  @search = IdeaBoard.ransack(params[:q])
 	  @search_idea_boards = @search.result.page(params[:page])
 	end
+
 end

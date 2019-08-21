@@ -1,10 +1,29 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, :only => [:show]
 
-def show
+  def show
       @idea_board = IdeaBoard.new
       @genres = Genre.all
   	  @user = User.find(params[:id])
-      @idea_boards = @user.idea_boards.page(params[:page]).per(20).order(created_at: :desc)
+      @currentUserEntry=Entry.where(user_id: current_user.id)
+      @userEntry=Entry.where(user_id: @user.id)
+      if @user.id == current_user.id
+      else
+        @currentUserEntry.each do |cu|
+          @userEntry.each do |u|
+            if cu.room_id == u.room_id then
+              @isRoom = true
+              @roomId = cu.room_id
+            end
+          end
+        end
+        if @isRoom
+        else
+          @room = Room.new
+          @entry = Entry.new
+        end
+      end
+        @idea_boards = @user.idea_boards.page(params[:page]).per(20).order(created_at: :desc)
   end
 
   def edit
@@ -39,6 +58,6 @@ def show
 
 	private
     def user_params
-    	params.require(:user).permit( :name, :image_id, :profile, :email)
+    	params.require(:user).permit( :name, :image, :profile, :email)
     end
 end

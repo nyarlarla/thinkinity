@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	root to: 'homes#top'
-	get 'about' => 'home#about'
+	get '/home/about' => 'homes#about'
 	devise_for :users
 	resources :users do
       get :followings
@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 		resources :comments, only: [:create, :destroy]
 	end
 	resources :favorites, only: [:index, :create, :destroy]
+	resources :messages, only: [:create]
+  	resources :rooms, only: [:create, :show, :index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

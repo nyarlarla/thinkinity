@@ -12,6 +12,9 @@ class User < ApplicationRecord
 	has_many :favorites
   	has_many :favposts, through: :favorites, source: :idea_board
 
+  	has_many :messages, dependent: :destroy
+  	has_many :entries, dependent: :destroy
+
   	def like(idea_board)
     favorites.find_or_create_by(idea_board_id: idea_board.id)
   	end

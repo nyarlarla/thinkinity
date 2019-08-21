@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card card-border">
+    <div class="card text-center card-header">
+      <h3 class="text-white">DM</h3>
+    </div>
+  <div class="card-body">
+    <h4 class="text-center">参加者</h4>
+    <% @entries.each do |e| %>
+      <div class="card card-body col-6 mb-3">
+        <table>
+          <tr>
+            <td class="text-center" rowspan="2" style="width:20%;">
+            <%= attachment_image_tag e.user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image" %>
+            </td>
+            <td style="width:60%;">
+              <%= link_to user_path(e.user) do %>
+                <h5><%= e.user.name %></h5>
+              <% end %>
+            </td>
+          </tr>
+        </table>
+      </div>
+    <% end %>
+
+    <%= form_for @message do |f| %>
+      <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , :size => 70, class: "form-control" %>
+      <%= f.hidden_field :room_id, :value => @room.id %>
+      <%= f.submit "メッセージを送る", class: "btn btn-secondary" %>
+    <% end %>
+
+    <div class="genre-head">
+      <h5 class="text-center">メッセージ一覧</h5>
+    </div>
+      <% if @messages.present? %>
+        <% @messages.each do |m| %>
+          <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
+          <small><strong><%= m.user.name %>さん</a></strong></small>
+          <div class="card card-body col-6">
+            <strong><%= m.content %></strong>
+          </div>
+        <% end %>
+      <% else %>
+        <h3 class="text-center">メッセージはまだありません</h3>
+      <% end %>
+  </div>
+</div>

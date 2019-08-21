@@ -1,13 +1,25 @@
-<div class="jumbotron">
-	<h1 class="display-4">こんにちは!</h1>
-	<p class="lead">
-		これは単純なヒーローユニット、注目のコンテンツや情報に特別な注意を喚起するためのシンプルなジャンボトロンスタイルのコンポーネント。
-	</p>
-	<hr class="my-4">
-	<p>
-		より大きなコンテナの範囲内でコンテンツに空間をあけるため、文字の体裁と空白用のユーティリティクラスを使用している。
-	</p>
-	<a class="btn btn-primary btn-lg" href="#" role="button">
-		もっと学ぼう
-	</a>
+<div id="gradient" />
+<div class="container">
+	<div style="padding-top:50px;">
+		<h1 class="col-6 mx-auto">
+			<small>Only you can think</small>
+			 あなたにしか思いつかない
+			 <small>
+			 	<div>
+				 	<%= link_to home_about_path do %>
+				 		<div class="badge badge-pill badge-secondary col-8">
+				 			Thinkinityとは
+				 		</div>
+				 	<% end %>
+			 	</div>
+			 	<div class="pt-3">
+				 	<%= link_to new_user_registration_path do %>
+				 		<div class="badge badge-pill badge-secondary col-8">
+				 			アカウントを作成する
+				 		</div>
+				 	<% end %>
+			 	</div>
+			 </small>
+		</h1>
+	</div>
 </div>

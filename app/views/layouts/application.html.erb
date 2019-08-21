@@ -14,93 +14,97 @@
       <div class="header-head">
         <div class="container">
           <div class="row">
-            <h1 class="col-3">Thinkinity</h1>
-            <div class="col-7">
-              <div class="row" style="margin-top: 10px">
-                <div class="col-10">
+            <div class="col-4">
+              <%= image_tag 'logo.jpg'%>
+            </div>
+            <div class="col-6">
+              <div class="row" style="margin-top: 30px">
+                <div class="col-10" style="padding-right: 0px">
                   <%= search_form_for @search, url: idea_boards_path do |f| %>
                     <%= f.text_field :head_cont ,placeholder: '検索するテキストを入力...', class: "form-control" %>
                 </div>
-                <div class="col-2">
+                <div class="col-2" style="padding-left: 0px">
                     <%= f.submit ("検索") , class: 'btn btn-block btn-secondary'%>
                 </div>
                   <% end %>
               </div>
             </div>
-            <div class="col-2" style="margin-top: 10px">
+            <% if user_signed_in? %>
+            <div class="col-2" style="margin-top: 30px">
               <button type="button" data-toggle="modal" data-backdrop="true" data-target="#modal-option" class="btn btn-block btn-primary">
                 投稿する
               </button>
             </div>
+            <% end %>
           </div>
         </div>
       </div>
       <div class="header-body">
         <div class="container">
-          <nav class="navbar">
+          <nav class="navbar text-white">
             <div class="nav-content col-12">
               <div class="searchbox list-group list-group-horizontal nav-list col-12">
               <ul class="list-group list-group-horizontal nav-list col-12 text-center">
                 <% if user_signed_in? %>
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-home"></i>
-                    <%= link_to "Top画面", root_path %>
+                    <%= link_to "Top画面", root_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-info"></i>
-                    <%= link_to "アバウト", about_path %>
+                    <%= link_to "アバウト", home_about_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-user"></i>
-                    <%= link_to "マイページ", user_path(current_user.id) %>
+                    <%= link_to "マイページ", user_path(current_user.id), class: "nav-text" %>
                     </%>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-book"></i>
-                    <%= link_to "アイデアボード", idea_boards_path %>
+                    <%= link_to "投稿一覧", idea_boards_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-lightbulb"></i>
-                    <%= link_to "新着", genres_path %>
+                    <%= link_to "新着", genres_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2 right-border">
                     <i class="fas fa-sign-out-alt"></i>
-                    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-text" %>
                   </li>
                 <% else %>
                     <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-home"></i>
-                    <%= link_to "ホーム", root_path %>
+                    <%= link_to "ホーム", root_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-info"></i>
-                    <%= link_to "アバウト", about_path %>
+                    <%= link_to "アバウト", about_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-book"></i>
-                    <%= link_to "アイデアボード", idea_boards_path %>
+                    <%= link_to "投稿一覧", idea_boards_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-lightbulb"></i>
-                    <%= link_to "新着", genres_path %>
+                    <%= link_to "新着", genres_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-user-circle"></i>
-                    <%= link_to "アカウント作成", new_user_registration_path %>
+                    <%= link_to "アカウント作成", new_user_registration_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item right-border col-2">
                     <i class="fas fa-sign-in-alt"></i>
-                    <%= link_to "ログイン", new_user_session_path %>
+                    <%= link_to "ログイン", new_user_session_path, class: "nav-text" %>
                   </li>
                 <% end %>
               </ul>
@@ -109,6 +113,7 @@
         </div>
       </div>
     </header>
+    <% if user_signed_in? %>
     <div class="modal fade" id="modal-option" tabindex="-1" role="dialog" aria-labelledby="myModalOptionLabel">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
@@ -163,8 +168,8 @@
           </div>
         </div>
       </div>
+      <% end %>
     <%= yield %>
-
     <footer>
       <p class="text-right">
       CopyRight Thinkinity.inc

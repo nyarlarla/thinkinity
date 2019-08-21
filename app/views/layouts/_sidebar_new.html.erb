@@ -1,14 +1,18 @@
-<div class="card shadow-sm">
-	<h5 class="text-center">新着投稿</h5>
+<div class="card card-border shadow">
+	<h5 class="text-center card-body card-header text-white">新着投稿</h5>
 	<% @genres.each do |genre| %>
-		<div class="card-body">
-			<%= genre.genre_symbol %>
+		<div class="card-body sidehead">
+			<%= link_to genre_path(genre.id) do %>
+				<%= genre.genre_symbol %>
+			<% end %>
 		</div>
 		<% genre.idea_boards.each_with_index do |g_idea, i| %>
 			<div class="card-body">
-				<%= g_idea.head %>
+				<%= link_to idea_board_path(g_idea.id) do %>
+					・<%= g_idea.head %>
+				<% end %>
 			</div>
-			<% break if i == 4 %>
+			<% break if i == 2 %>
 		<% end %>
 	<% end %>
 </div>

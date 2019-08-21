@@ -1,6 +1,7 @@
 class FavoritesController < ApplicationController
   def index
     @idea_board = IdeaBoard.new
+    @genres = Genre.all
     @user = current_user
     @favorites = Favorite.where(user_id: @user.id).all
   end
