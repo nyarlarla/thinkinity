@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, :only => [:show]
+  before_action :correct_user, only: [:edit, :update]
 
   def show
       @idea_board = IdeaBoard.new
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
           @entry = Entry.new
         end
       end
-        @idea_boards = @user.idea_boards.page(params[:page]).per(20).order(created_at: :desc)
+      @idea_boards = @user.idea_boards.page(params[:page]).per(20).order(created_at: :desc)
   end
 
   def edit
@@ -60,4 +61,11 @@ class UsersController < ApplicationController
     def user_params
     	params.require(:user).permit( :name, :image, :profile, :email)
     end
+
+    def correct_user
+    @user = current_user
+      unless @user
+        redirect_to root_url
+      end
+  end
 end

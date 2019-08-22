@@ -1,0 +1,15 @@
+<% flash.each do |message_type, message| %>
+  <% if flash[:success] %>
+    <div class="alert alert-success">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<% flash.each do |message_type, message| %>
+  <% if flash[:notice] %>
+    <div class="alert alert-warning">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>

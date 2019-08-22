@@ -9,7 +9,7 @@
 						</h5>
 					</div>
 				<% end %>
-				<% genre.idea_boards.each_with_index do |idea, i| %>
+				<% genre.idea_boards.order("id DESC").each_with_index do |idea, i| %>
 					<div class="card box">
 						<div>
 							<div class="card-body">

@@ -1,0 +1,29 @@
+<div class="container col-6" style="margin-top:50px;">
+	<div class="container col-10">
+		<%= form_for(@idea_board) do |f| %>
+			 <table border="1" bordercolor="#4682B4" cellpadding="15" style="width:100%; border-collapse:separate;">
+			 	<tr>
+ 					  <th><%= f.label :ジャンル%></th>
+                      <td class="bg-white">
+                        <%= f.collection_select :genre_id, Genre.all, :id, :genre_symbol, :prompt => "ジャンルを選択してください", class: "select" %>
+                      </td>
+			 	<tr>
+					<th><%= f.label :タグ %></th>
+					<td><%= f.text_field :tag_list, value: @idea_board.tag_list.join(','), class: "form-control" %></td>
+				</tr>
+				<tr>
+					<th><%= f.label :タイトル %></th>
+					<td><%= f.text_field :head, class: "form-control" %></td>
+				</tr>
+
+				<tr>
+					<th><%= f.label :内容 %></th>
+			        <td><%= f.text_area :body, class: "form-control" %></td>
+				</tr>
+				<tr>
+					<td colspan="2"><%= f.submit "変更を確定する", class: "btn btn-primary btn-block" %></td>
+				</tr>
+			</table>
+		<% end %>
+	</div>
+</div>

@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 	       redirect_to idea_board_path(@idea_board)
 	    else
 	       redirect_to(idea_boards_path)
+	       flash[:notice] = "コメントの投稿に失敗しました"
 	    end
 	end
 

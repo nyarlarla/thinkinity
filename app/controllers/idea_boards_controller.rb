@@ -1,4 +1,5 @@
 class IdeaBoardsController < ApplicationController
+before_action :correct_user, only: [:edit, :update]
 
 	def new
 		@idea_board = IdeaBoard.new
@@ -8,9 +9,11 @@ class IdeaBoardsController < ApplicationController
 		@idea_board = IdeaBoard.new(idea_board_params)
 		@idea_board.user_id = current_user.id
 		if@idea_board.save
-			redirect_to genres_path
+			redirect_back(fallback_location: root_path)
+			flash[:success]
 		else
-    		redirect_to genres_path
+    		redirect_back(fallback_location: root_path)
+    		flash[:notice]
     	end
 	end
 
@@ -18,9 +21,9 @@ class IdeaBoardsController < ApplicationController
 		@genres = Genre.all
 		@idea_board = IdeaBoard.new
 		if params[:tag]
-		@idea_boards = IdeaBoard.tagged_with(params[:tag]).page(params[:page]).per(20).order(created_at: :desc)
+			@idea_boards = IdeaBoard.tagged_with(params[:tag]).page(params[:page]).per(20).order(created_at: :desc)
   		else
-		@idea_boards = @search_idea_boards.page(params[:page]).per(20).order(created_at: :desc)
+			@idea_boards = @search_idea_boards.page(params[:page]).per(20).order(created_at: :desc)
 		end
 	end
 
@@ -32,12 +35,17 @@ class IdeaBoardsController < ApplicationController
 	end
 
 	def edit
+		@genres = Genre.all
 		@idea_board = IdeaBoard.find(params[:id])
 	end
 
 	def update
 		@idea_board = IdeaBoard.find(params[:id])
-		@idea_board.update()
+		if @idea_board.update(idea_board_params)
+	        redirect_to user_path(@idea_board.user)
+		else
+	        render :edit
+		end
 	end
 
 	def destroy
@@ -52,5 +60,12 @@ class IdeaBoardsController < ApplicationController
 	private
 	def idea_board_params
 		params.require(:idea_board).permit(:user_id, :tag_id, :genre_id, :head, :body, :tag_list, :image)
+	end
+
+	def correct_user
+	@idea_board = current_user.idea_board.find_by(id: params[:id])
+	    unless @idea_board
+	      redirect_to root_url
+	    end
 	end
 end

@@ -84,7 +84,7 @@
 
                   <li class="list-inline-item nav-list-item col-2">
                     <i class="fas fa-info"></i>
-                    <%= link_to "アバウト", about_path, class: "nav-text" %>
+                    <%= link_to "アバウト", home_about_path, class: "nav-text" %>
                   </li>
 
                   <li class="list-inline-item nav-list-item col-2">
@@ -169,11 +169,62 @@
         </div>
       </div>
       <% end %>
+      
+      <div class=" card-body">
+        <%= render 'layouts/flash_messages' %>
+      </div>
+
     <%= yield %>
-    <footer>
-      <p class="text-right">
-      CopyRight Thinkinity.inc
-      </p>
+
+    <footer class="page-footer font-small pt-4">
+      <div class="footer-head">
+        <div class="container">
+          <div class="row">
+            <div class="col-5">
+              <div class="row">
+                <div class="col-4 mb-4 text-center">
+                  <div class="text-light pt-3">
+                    <% if user_signed_in? %>
+                      <i class="fas fa-lightbulb"></i>
+                      <%= link_to "新着", genres_path, class: "nav-text" %>
+                    <% else %>
+                      <i class="fas fa-home"></i>
+                      <%= link_to "ホーム", root_path, class: "nav-text" %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="col-4 mb-4 text-center">
+                  <div class="text-light pt-3">
+                    <% if user_signed_in? %>
+                      <i class="fas fa-book"></i>
+                      <%= link_to "投稿一覧", idea_boards_path, class: "nav-text" %>
+                    <% else %>
+                      <i class="fas fa-sign-in-alt"></i>
+                      <%= link_to "ログイン", new_user_session_path, class: "nav-text" %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="col-4 mb-4 text-center">
+                  <div class="text-light pt-3">
+                    <% if user_signed_in? %>
+                      <i class="fas fa-sign-out-alt"></i>
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-text" %>
+                    <% else %>
+                      <i class="fas fa-user-circle"></i>
+                      <%= link_to "アカウント作成", new_user_registration_path, class: "nav-text" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-7">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-foot text-center py-3 text-light">
+        © Copyright:Thinkinity
+      </div>
     </footer>
   </body>
 </html>
