@@ -5,20 +5,30 @@
 			<small>Only you can think</small>
 			 あなたにしか思いつかない
 			 <small>
-			 	<div>
-				 	<%= link_to home_about_path do %>
-				 		<div class="badge badge-pill badge-secondary col-8">
-				 			Thinkinityとは
-				 		</div>
-				 	<% end %>
-			 	</div>
-			 	<div class="pt-3">
-				 	<%= link_to new_user_registration_path do %>
-				 		<div class="badge badge-pill badge-secondary col-8">
-				 			アカウントを作成する
-				 		</div>
-				 	<% end %>
-			 	</div>
+			 	<% if user_signed_in? %>
+				 	<div>
+					 	<%= link_to home_about_path do %>
+					 		<div class="badge badge-pill badge-secondary col-8">
+					 			Thinkinityとは
+					 		</div>
+					 	<% end %>
+				 	</div>
+				 	<div class="pt-3">
+					 	<%= link_to new_user_registration_path do %>
+					 		<div class="badge badge-pill badge-secondary col-8">
+					 			アカウントを作成する
+					 		</div>
+					 	<% end %>
+				 	</div>
+			 	<% else %>
+			 		<div>
+					 	<%= link_to home_about_path do %>
+					 		<div class="badge badge-pill badge-secondary col-8">
+					 			Thinkinityとは
+					 		</div>
+					 	<% end %>
+				 	</div>
+			 	<% end %>
 			 </small>
 		</h1>
 	</div>
