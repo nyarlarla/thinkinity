@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :login_check, only: [:show, :index, :new, :edit, :update, :destroy]
   before_action :authenticate_user!, :only => [:show]
   before_action :correct_user, only: [:edit, :update]
 
@@ -63,9 +64,16 @@ class UsersController < ApplicationController
     end
 
     def correct_user
-    @user = current_user
+      @user = current_user
       unless @user
         redirect_to root_url
       end
-  end
+    end
+
+    def login_check
+      unless user_signed_in?
+        flash[:alert] = "ログインしてください"
+        redirect_to root_path
+      end
+    end
 end
