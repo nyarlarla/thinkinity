@@ -33,7 +33,7 @@
 						<div class="row card-body">
 								<div class="col-4">
 									<div class="text-center">
-										<%= attachment_image_tag idea.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image" %>
+										<%= attachment_image_tag idea.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image img-fluid" %>
 									</div>
 									<div class="text-center">
 										<%= idea.user.name %>

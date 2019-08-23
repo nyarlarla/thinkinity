@@ -18,7 +18,7 @@
 					<% @anotherEntries.each do |e| %>
 						<tr>
 							<td class="text-center" style="width:20%">
-								<%= attachment_image_tag e.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.png", size:'50x50', class: "profile_image" %>
+								<%= attachment_image_tag e.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.png", size:'50x50', class: "profile_image img-fluid" %>
 							</td>
 							<td class="col-9" style="width:80%">
 								<%= link_to room_path(e.room.id) do %>
