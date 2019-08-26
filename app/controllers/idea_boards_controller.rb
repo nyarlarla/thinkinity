@@ -36,6 +36,7 @@ before_action :correct_user, only: [:edit, :update]
 	end
 
 	def edit
+		@idea_board = IdeaBoard.new
 		@genres = Genre.all
 		@idea_board = IdeaBoard.find(params[:id])
 	end
@@ -64,11 +65,11 @@ before_action :correct_user, only: [:edit, :update]
 	end
 
 	def correct_user
-	@idea_board = current_user.idea_board.find_by(id: params[:id])
-	    unless @idea_board
-	      redirect_to root_url
-	    end
-	end
+      @user = current_user
+      unless @user
+        redirect_to root_url
+      end
+    end
 
 	def login_check
       unless user_signed_in?
