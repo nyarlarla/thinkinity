@@ -8,6 +8,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Genre.create(:genre_symbol => 'エンターテイメント')
-Genre.create(:genre_symbol => 'ライフ')
-Genre.create(:genre_symbol => 'サービス')
-Genre.create(:genre_symbol => 'インターネット')
+Genre.create(:genre_symbol => '生活・医療')
+Genre.create(:genre_symbol => '技術・サービス')
+Genre.create(:genre_symbol => 'ネットワーク・情報')
+Genre.create(:genre_symbol => '自然・社会')
+Genre.create(:genre_symbol => 'その他')
