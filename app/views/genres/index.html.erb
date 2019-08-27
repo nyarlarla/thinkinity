@@ -1,11 +1,7 @@
-<div class="card-body">
-	<%= render 'layouts/flash_messages' %>
-</div>
-
 <div class="container">
 	<div class="row">
 		<% @genres.each do |genre| %>
-			<div class="col-4">
+			<div class="col-xl-4">
 	    		<%= link_to genre_path(genre.id) do %>
 	    			<div class=genre-head>
 						<h5 class="text-center">
@@ -18,10 +14,10 @@
 						<div>
 							<div class="card-body">
 								<%= link_to idea_board_path(idea) do %>
-									<h5 class="box-color"><%= idea.head %></h5>
+									<h5 class="box-color"><%= idea.head.truncate(14, separator: ' ') %></h5>
 								<% end %>
 							</div>
-							<div class="card-body">
+							<div style="padding-left:20px">
 								<%= render 'favorites/like_button', idea_board: idea %>
 							</div>
 							<div class="card-body"> タグ：
@@ -30,17 +26,19 @@
 								</span>
 							</div>
 						</div>
-						<div class="row card-body">
-								<div class="col-4">
+						<div class="row">
+								<div class="col-3">
 									<div class="text-center">
-										<%= attachment_image_tag idea.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image img-fluid" %>
-									</div>
-									<div class="text-center">
-										<%= idea.user.name %>
+										<div>
+											<%= attachment_image_tag idea.user, :image, :fill, 75, 75, format: 'jpeg', fallback: "no_image.png", size:'75x75', class: "profile_image img-fluid" %>
+										</div>
+										<div>
+											<%= idea.user.name %>
+										</div>
 									</div>
 								</div>
-								<div class="col-8">
-									<div class="card card-body box-color">
+								<div class="col-9">
+									<div class="card box-color text-box p-2 overflow-auto">
 										<%= idea.body %>
 									</div>
 								</div>

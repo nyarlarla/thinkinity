@@ -5,11 +5,11 @@
 <div class="container col-6" style="margin-top:50px;">
 	<div class="container col-10">
 		<%= form_for(@user) do |f| %>
-			 <table border="1" bordercolor="#4682B4" cellpadding="15" style="width:100%; border-collapse:separate;">
+			 <table class="bg-white" border="1" bordercolor="#4682B4" cellpadding="15" style="width:100%; border-collapse:separate;">
 
 			 	<tr>
 			 		<th><%= f.label :プロフィール画像 %></th>
-            		<td><%= f.attachment_field :image %></td>
+            		<td bg-white><%= f.attachment_field :image %></td>
 			 	</tr>
 
 				<tr>
@@ -34,5 +34,12 @@
 				</tr>
 			</table>
 		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="col-7">
+	</div>
+	<div class="card-body">
+		<%= link_to "アカウントを削除する", user_path(@user), class: "col-3", method: :delete, "data-confirm" => "本当に退会しますか？" %>
 	</div>
 </div>

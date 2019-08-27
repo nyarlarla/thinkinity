@@ -3,10 +3,20 @@
 	<div style="padding-top:75px;">
 		<h1 class="col-6 mx-auto">
 			<small>Only you can think</small>
-			 あなたにしか思いつかない
+			 あなたにしか<br/>
+			 思いつかない<br/>
+			 ことがある
 			 <small>
 			 	<% if user_signed_in? %>
 				 	<div>
+					 	<%= link_to home_about_path do %>
+					 		<div class="badge badge-pill badge-secondary col-8">
+					 			Thinkinityとは
+					 		</div>
+					 	<% end %>
+				 	</div>
+			 	<% else %>
+			 		<div>
 					 	<%= link_to home_about_path do %>
 					 		<div class="badge badge-pill badge-secondary col-8">
 					 			Thinkinityとは
@@ -17,14 +27,6 @@
 					 	<%= link_to new_user_registration_path do %>
 					 		<div class="badge badge-pill badge-secondary col-8">
 					 			アカウントを作成する
-					 		</div>
-					 	<% end %>
-				 	</div>
-			 	<% else %>
-			 		<div>
-					 	<%= link_to home_about_path do %>
-					 		<div class="badge badge-pill badge-secondary col-8">
-					 			Thinkinityとは
 					 		</div>
 					 	<% end %>
 				 	</div>

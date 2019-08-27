@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+      @genres = Genre.all
       @idea_board = IdeaBoard.new
   	  @user = User.find(params[:id])
       if @user.id != current_user.id
@@ -47,7 +48,7 @@ class UsersController < ApplicationController
 
   def destroy
       @user = User.find(params[:id])
-      if user.destroy
+      if @user.destroy
         redirect_to root_path
       end
   end

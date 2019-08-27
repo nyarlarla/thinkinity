@@ -1,12 +1,12 @@
-<div class="container">
-  <div class="col-9 log">
+<div class="container" style="margin-top:50px;">
+  <div class="col-6 mx-auto">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <table  border="1" bordercolor="#4682B4" cellpadding="15" style="width:100%; border-collapse:separate;">
+      <table class="bg-white"  border="1" bordercolor="#4682B4" cellpadding="15" style="width:100%; border-collapse:separate;">
         <tr><td colspan="2"><h2>ログイン</h2></td></tr>
 
 
           <tr>
-            <th style = "width:30%"><%= f.label :メールアドレス %></th>
+            <th class="bg-white" style = "width:30%"><%= f.label :メールアドレス %></th>
             <td style = "width:70%"><%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %></td>
           </tr>
 
@@ -22,8 +22,4 @@
       </table>
     <% end %>
   </div>
-</div>
-
-<div class="container">
-  <%= render "devise/shared/links" %>
 </div>

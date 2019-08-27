@@ -1,7 +1,3 @@
-<div class="card-body">
-  <%= render 'layouts/flash_messages' %>
-</div>
-
 <div class="container">
   <div class="card card-border">
     <div class="card text-center card-header">
@@ -10,38 +6,60 @@
   <div class="card-body">
     <h4 class="text-center">参加者</h4>
     <% @entries.each do |e| %>
-      <div class="card card-body col-6 mb-3">
-        <table>
-          <tr>
-            <td class="text-center" rowspan="2" style="width:20%;">
-            <%= attachment_image_tag e.user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image img-fluid" %>
-            </td>
-            <td style="width:60%;">
-              <%= link_to user_path(e.user) do %>
-                <h5><%= e.user.name %></h5>
-              <% end %>
-            </td>
-          </tr>
-        </table>
-      </div>
+        <div class="card col-6 mb-3">
+          <table>
+            <tr>
+              <td class="text-center" rowspan="2" style="width:20%;">
+              <%= attachment_image_tag e.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.png", size:'50x50', class: "profile_image img-fluid" %>
+              </td>
+              <td style="width:60%;">
+                <%= link_to user_path(e.user) do %>
+                  <h5><%= e.user.name %></h5>
+                <% end %>
+              </td>
+            </tr>
+          </table>
+        </div>
     <% end %>
 
-    <%= form_for @message do |f| %>
-      <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , :size => 70, class: "form-control" %>
-      <%= f.hidden_field :room_id, :value => @room.id %>
-      <%= f.submit "メッセージを送る", class: "btn btn-secondary" %>
-    <% end %>
+    <div class="mt-4">
+      <%= form_for @message do |f| %>
+        <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , :size => 70, class: "form-control" %>
+        <%= f.hidden_field :room_id, :value => @room.id %>
+        <%= f.submit "メッセージを送る", class: "btn btn-secondary" %>
+      <% end %>
+    </div>
 
     <div class="genre-head">
       <h5 class="text-center">メッセージ一覧</h5>
     </div>
       <% if @messages.present? %>
         <% @messages.each do |m| %>
-          <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
-          <small><strong><%= m.user.name %>さん</a></strong></small>
-          <div class="card card-body col-6">
-            <strong><%= m.content %></strong>
-          </div>
+          <% if m.user.id == current_user.id %>
+            <div class="row">
+              <div class="col-8">
+                <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
+                <small><strong><%= m.user.name %>さん</a></strong></small>
+                <div class="card card-body col-6">
+                  <strong><%= m.content %></strong>
+                </div>
+              </div>
+              <div class="col-4">
+              </div>
+            </div>
+          <% else %>
+            <div class="row">
+              <div class="col-4">
+              </div>
+              <div class="col-8">
+                <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
+                <small><strong><%= m.user.name %>さん</a></strong></small>
+                <div class="card card-body col-6">
+                  <strong><%= m.content %></strong>
+                </div>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       <% else %>
         <h3 class="text-center">メッセージはまだありません</h3>

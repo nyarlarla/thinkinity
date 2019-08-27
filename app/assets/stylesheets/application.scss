@@ -49,14 +49,6 @@ body{overflow: visible !important;
   border: ridge 3px #606060;
 }
 
-.nav-list-item{
-  border-left: groove 2px  #808080;
-}
-
-.right-border{
-  border-right: groove 2px  #808080;
-}
-
 #gradient
 {
   width: 100%;
@@ -165,6 +157,8 @@ h1 {
     border: solid 2px #606060;
     border-radius: 3px 0 3px 0;
     margin-bottom:20px;
+    height: 350px;
+    min-width: 350px;
 }
 .box:before,.box:after
 {
@@ -182,6 +176,14 @@ h1 {
 .box:before {
     bottom:-12px;
     right:-12px;
+}
+
+.text-box{
+  height: 135px;
+}
+
+.show-text{
+  min-height: 170px;
 }
 
 
@@ -247,5 +249,38 @@ h1 {
 
 .min-container{
   min-height: 450px
+}
+
+.btn-fav {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  transition: .3s;
+}
+.btn-fav i {
+  line-height: 50px;
+}
+.btn-fav:hover　{
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.28);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.btn-fav-icon{
+  color: #ff6d82;
+  background-image: linear-gradient(#ffcfd7 0%, #ff7285 100%);
+}
+
+.comment-text{
+  min-height: 120px;
 }
 
