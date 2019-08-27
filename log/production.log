@@ -1845,3 +1845,736 @@ F, [2019-08-26T09:47:14.663603 #14198] FATAL -- : [b1ae5c99-ab0e-4c06-9f62-9a475
 F, [2019-08-26T09:47:14.663776 #14198] FATAL -- : [b1ae5c99-ab0e-4c06-9f62-9a47599146c3] NoMethodError (undefined method `idea_board' for #<User:0x00007efda0b9d8c8>):
 F, [2019-08-26T09:47:14.663851 #14198] FATAL -- : [b1ae5c99-ab0e-4c06-9f62-9a47599146c3]   
 F, [2019-08-26T09:47:14.663890 #14198] FATAL -- : [b1ae5c99-ab0e-4c06-9f62-9a47599146c3] app/controllers/idea_boards_controller.rb:67:in `correct_user'
+I, [2019-08-26T10:34:13.231185 #14198]  INFO -- : [8655101a-bc5d-445d-ba52-298e2f21c146] Started GET "/idea_boards/1/edit" for 220.148.154.162 at 2019-08-26 10:34:13 +0000
+I, [2019-08-26T10:34:13.231877 #14198]  INFO -- : [8655101a-bc5d-445d-ba52-298e2f21c146] Processing by IdeaBoardsController#edit as HTML
+I, [2019-08-26T10:34:13.231925 #14198]  INFO -- : [8655101a-bc5d-445d-ba52-298e2f21c146]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:34:13.342502 #14198] DEBUG -- : [8655101a-bc5d-445d-ba52-298e2f21c146]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+D, [2019-08-26T10:34:13.344294 #14198] DEBUG -- : [8655101a-bc5d-445d-ba52-298e2f21c146]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2019-08-26T10:34:13.345084 #14198]  INFO -- : [8655101a-bc5d-445d-ba52-298e2f21c146] Completed 500 Internal Server Error in 113ms (ActiveRecord: 1.1ms)
+F, [2019-08-26T10:34:13.345535 #14198] FATAL -- : [8655101a-bc5d-445d-ba52-298e2f21c146]   
+F, [2019-08-26T10:34:13.345770 #14198] FATAL -- : [8655101a-bc5d-445d-ba52-298e2f21c146] NoMethodError (undefined method `idea_board' for #<User:0x00007efda0bb4e88>):
+F, [2019-08-26T10:34:13.345839 #14198] FATAL -- : [8655101a-bc5d-445d-ba52-298e2f21c146]   
+F, [2019-08-26T10:34:13.345874 #14198] FATAL -- : [8655101a-bc5d-445d-ba52-298e2f21c146] app/controllers/idea_boards_controller.rb:67:in `correct_user'
+I, [2019-08-26T10:34:41.078104 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6] Started GET "/users/1" for 220.148.154.162 at 2019-08-26 10:34:41 +0000
+I, [2019-08-26T10:34:41.081218 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6] Processing by UsersController#show as HTML
+I, [2019-08-26T10:34:41.081306 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:34:41.099418 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+D, [2019-08-26T10:34:41.109331 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:34:41.147207 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:34:41.154222 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   Rendering users/show.html.erb within layouts/application
+I, [2019-08-26T10:34:41.158192 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   Rendered layouts/_flash_messages.html.erb (0.8ms)
+D, [2019-08-26T10:34:41.162373 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:34:41.171801 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:34:41.173052 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:34:41.174908 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:34:41.175999 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:34:41.177179 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:34:41.178330 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:34:41.178468 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   Rendered layouts/_sidebar_new.html.erb (17.7ms)
+D, [2019-08-26T10:34:41.179604 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1 ORDER BY id DESC[0m
+D, [2019-08-26T10:34:41.189378 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:34:41.203777 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:34:41.208481 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1[0m
+I, [2019-08-26T10:34:41.210538 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   Rendered users/show.html.erb within layouts/application (56.2ms)
+D, [2019-08-26T10:34:41.222217 #16005] DEBUG -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:34:41.225858 #16005]  INFO -- : [5d9dfb19-6acb-456c-b963-330fe93fe5d6] Completed 200 OK in 144ms (Views: 63.5ms | ActiveRecord: 16.6ms)
+I, [2019-08-26T10:34:43.023769 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b] Started GET "/idea_boards/1/edit" for 220.148.154.162 at 2019-08-26 10:34:43 +0000
+I, [2019-08-26T10:34:43.024827 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b] Processing by IdeaBoardsController#edit as HTML
+I, [2019-08-26T10:34:43.024878 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:34:43.027758 #16005] DEBUG -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:34:43.029261 #16005] DEBUG -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:34:43.031421 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   Rendering idea_boards/edit.html.erb within layouts/application
+I, [2019-08-26T10:34:43.032426 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:34:43.034188 #16005] DEBUG -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:34:43.036334 #16005] DEBUG -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:34:43.038316 #16005] DEBUG -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+I, [2019-08-26T10:34:43.040039 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   Rendered idea_boards/edit.html.erb within layouts/application (8.5ms)
+D, [2019-08-26T10:34:43.042342 #16005] DEBUG -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:34:43.044324 #16005]  INFO -- : [efa8fea9-a14c-44ba-a736-9c674f86a76b] Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 2.8ms)
+I, [2019-08-26T10:34:50.799386 #16005]  INFO -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59] Started PATCH "/idea_boards/1" for 220.148.154.162 at 2019-08-26 10:34:50 +0000
+I, [2019-08-26T10:34:50.800283 #16005]  INFO -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59] Processing by IdeaBoardsController#update as HTML
+I, [2019-08-26T10:34:50.800361 #16005]  INFO -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"5vZwiJ3pd+SBcWFUt0rkSfULfpJH/9HVMtksG0dKVp3kB+LakFEmXkUFiLKD39TJnsCZkKSMhigNJmkMLS17HQ==", "idea_board"=>{"genre_id"=>"2", "tag_list"=>"ヘアスタイル", "head"=>"美容院での髪型の注文", "body"=>"毎回美容院で希望を伝えるのがめんどくさいので、自分の希望の髪型や、過去の履歴などを画像で保存しておいて、全国の美容院でそれが閲覧できるアプリケーション"}, "commit"=>"変更を確定する", "id"=>"1"}
+D, [2019-08-26T10:34:50.803392 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:34:50.804530 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:34:50.805616 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+D, [2019-08-26T10:34:50.807410 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:34:50.809417 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:34:50.811729 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:34:50.813250 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT  `genres`.* FROM `genres` WHERE `genres`.`id` = 2 LIMIT 1[0m
+D, [2019-08-26T10:34:50.816207 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mIdeaBoard Update (0.5ms)[0m  [1m[33mUPDATE `idea_boards` SET `body` = '毎回美容院で希望を伝えるのがめんどくさいので、自分の希望の髪型や、過去の履歴などを画像で保存しておいて、全国の美容院でそれが閲覧できるアプリケーション', `updated_at` = '2019-08-26 10:34:50' WHERE `idea_boards`.`id` = 1[0m
+D, [2019-08-26T10:34:50.897729 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE (LOWER(name) = LOWER('ヘアスタイル'))[0m
+D, [2019-08-26T10:34:50.899709 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:34:50.900357 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mCACHE ActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE (LOWER(name) = LOWER('ヘアスタイル'))[0m
+D, [2019-08-26T10:34:50.900987 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[36mCACHE ActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:34:50.909171 #16005] DEBUG -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59]   [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+I, [2019-08-26T10:34:50.909671 #16005]  INFO -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59] Redirected to http://ec2-3-114-250-38.ap-northeast-1.compute.amazonaws.com/users/1
+I, [2019-08-26T10:34:50.909848 #16005]  INFO -- : [63098f72-75dd-4d2a-ac4d-86fa32cd4a59] Completed 302 Found in 109ms (ActiveRecord: 13.8ms)
+I, [2019-08-26T10:34:50.922621 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661] Started GET "/users/1" for 220.148.154.162 at 2019-08-26 10:34:50 +0000
+I, [2019-08-26T10:34:50.923309 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661] Processing by UsersController#show as HTML
+I, [2019-08-26T10:34:50.923368 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:34:50.925724 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:34:50.926906 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:34:50.928268 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   Rendering users/show.html.erb within layouts/application
+I, [2019-08-26T10:34:50.928516 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:34:50.930160 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:34:50.931380 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:34:50.932511 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:34:50.933728 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:34:50.934754 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:34:50.935905 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:34:50.936860 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:34:50.936985 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   Rendered layouts/_sidebar_new.html.erb (7.6ms)
+D, [2019-08-26T10:34:50.938034 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1 ORDER BY id DESC[0m
+D, [2019-08-26T10:34:50.939842 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:34:50.941762 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:34:50.943033 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1[0m
+I, [2019-08-26T10:34:50.943425 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   Rendered users/show.html.erb within layouts/application (15.1ms)
+D, [2019-08-26T10:34:50.945694 #16005] DEBUG -- : [35ae5926-da91-46b2-8e78-4fa805ce2661]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:34:50.948216 #16005]  INFO -- : [35ae5926-da91-46b2-8e78-4fa805ce2661] Completed 200 OK in 25ms (Views: 14.1ms | ActiveRecord: 7.2ms)
+I, [2019-08-26T10:34:56.215049 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d] Started GET "/rooms" for 220.148.154.162 at 2019-08-26 10:34:56 +0000
+I, [2019-08-26T10:34:56.215853 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d] Processing by RoomsController#index as HTML
+D, [2019-08-26T10:34:56.218739 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:34:56.220883 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT `entries`.* FROM `entries` WHERE `entries`.`user_id` = 1[0m
+I, [2019-08-26T10:34:56.223113 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d]   Rendering rooms/index.html.erb within layouts/application
+I, [2019-08-26T10:34:56.223927 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:34:56.224822 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:34:56.226399 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:34:56.227543 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:34:56.228880 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:34:56.229967 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:34:56.230907 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:34:56.231842 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:34:56.231969 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d]   Rendered layouts/_sidebar_new.html.erb (7.9ms)
+D, [2019-08-26T10:34:56.232748 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT `entries`.* FROM `entries` WHERE 1=0 AND (user_id != 1)[0m
+I, [2019-08-26T10:34:56.232904 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d]   Rendered rooms/index.html.erb within layouts/application (9.7ms)
+D, [2019-08-26T10:34:56.235212 #16005] DEBUG -- : [61729aa6-5890-4614-a3c6-1119852a776d]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:34:56.237967 #16005]  INFO -- : [61729aa6-5890-4614-a3c6-1119852a776d] Completed 200 OK in 22ms (Views: 12.0ms | ActiveRecord: 5.3ms)
+I, [2019-08-26T10:35:01.064889 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76] Started GET "/users/1" for 220.148.154.162 at 2019-08-26 10:35:01 +0000
+I, [2019-08-26T10:35:01.065738 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76] Processing by UsersController#show as HTML
+I, [2019-08-26T10:35:01.065789 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:35:01.068373 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:35:01.069578 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:01.070849 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   Rendering users/show.html.erb within layouts/application
+I, [2019-08-26T10:35:01.071091 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:01.072645 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:35:01.074115 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:35:01.075205 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:35:01.076460 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:35:01.077513 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:35:01.078503 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:35:01.079496 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:35:01.079633 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   Rendered layouts/_sidebar_new.html.erb (7.7ms)
+D, [2019-08-26T10:35:01.080566 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1 ORDER BY id DESC[0m
+D, [2019-08-26T10:35:01.090330 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:35:01.092464 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:35:01.093844 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1[0m
+I, [2019-08-26T10:35:01.094261 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   Rendered users/show.html.erb within layouts/application (23.3ms)
+D, [2019-08-26T10:35:01.096487 #16005] DEBUG -- : [03b4bf25-858f-4de9-85b3-034250eb9f76]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:01.099038 #16005]  INFO -- : [03b4bf25-858f-4de9-85b3-034250eb9f76] Completed 200 OK in 33ms (Views: 22.5ms | ActiveRecord: 7.2ms)
+I, [2019-08-26T10:35:03.726670 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3] Started GET "/favorites" for 220.148.154.162 at 2019-08-26 10:35:03 +0000
+I, [2019-08-26T10:35:03.727484 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3] Processing by FavoritesController#index as HTML
+D, [2019-08-26T10:35:03.730333 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2019-08-26T10:35:03.734186 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   Rendering favorites/index.html.erb within layouts/application
+I, [2019-08-26T10:35:03.735714 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:03.737419 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:35:03.738881 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:35:03.739902 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:35:03.741182 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:35:03.742238 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:35:03.743267 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:35:03.744312 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:35:03.744436 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   Rendered layouts/_sidebar_new.html.erb (7.8ms)
+D, [2019-08-26T10:35:03.745287 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`user_id` = 1[0m
+D, [2019-08-26T10:35:03.752101 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:03.753324 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:03.757339 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mIdeaBoard Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `idea_boards` INNER JOIN `favorites` ON `idea_boards`.`id` = `favorites`.`idea_board_id` WHERE `favorites`.`user_id` = 1 AND `idea_boards`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:03.758653 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`user_id` = 1 AND `favorites`.`idea_board_id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:03.759890 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   Rendered favorites/_like_button.html.erb (5.5ms)
+D, [2019-08-26T10:35:03.761065 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:35:03.763020 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+I, [2019-08-26T10:35:03.763487 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   Rendered favorites/index.html.erb within layouts/application (29.2ms)
+D, [2019-08-26T10:35:03.765875 #16005] DEBUG -- : [d742f80f-305c-4cb7-b393-92aa303e4df3]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:03.768359 #16005]  INFO -- : [d742f80f-305c-4cb7-b393-92aa303e4df3] Completed 200 OK in 41ms (Views: 27.2ms | ActiveRecord: 9.7ms)
+I, [2019-08-26T10:35:07.968284 #16005]  INFO -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254] Started DELETE "/favorites/1" for 220.148.154.162 at 2019-08-26 10:35:07 +0000
+I, [2019-08-26T10:35:07.969058 #16005]  INFO -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254] Processing by FavoritesController#destroy as HTML
+I, [2019-08-26T10:35:07.969117 #16005]  INFO -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"w/ryjZXT+8hX2ro6wqxoV+89952dYxKmleeJEH/f5DKZ49ILhBx5FoK41SECzERiQGDPmQzxmb/DGEa/nqY5MQ==", "idea_board_id"=>"1", "commit"=>"お気に入り登録解除", "id"=>"1"}
+D, [2019-08-26T10:35:07.971537 #16005] DEBUG -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   [1m[36mIdeaBoard Load (0.7ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:07.972952 #16005] DEBUG -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:35:07.974452 #16005] DEBUG -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`user_id` = 1 AND `favorites`.`idea_board_id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:07.975205 #16005] DEBUG -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+D, [2019-08-26T10:35:07.976198 #16005] DEBUG -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   [1m[36mFavorite Destroy (0.5ms)[0m  [1m[31mDELETE FROM `favorites` WHERE `favorites`.`id` = 1[0m
+D, [2019-08-26T10:35:07.987678 #16005] DEBUG -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254]   [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+I, [2019-08-26T10:35:07.988004 #16005]  INFO -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254] Redirected to http://ec2-3-114-250-38.ap-northeast-1.compute.amazonaws.com/favorites
+I, [2019-08-26T10:35:07.988169 #16005]  INFO -- : [ec450c88-c1c1-40fb-8f07-fe6e68806254] Completed 302 Found in 19ms (ActiveRecord: 14.0ms)
+I, [2019-08-26T10:35:08.001889 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103] Started GET "/favorites" for 220.148.154.162 at 2019-08-26 10:35:08 +0000
+I, [2019-08-26T10:35:08.002488 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103] Processing by FavoritesController#index as HTML
+D, [2019-08-26T10:35:08.005571 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2019-08-26T10:35:08.006425 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   Rendering favorites/index.html.erb within layouts/application
+I, [2019-08-26T10:35:08.006687 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:08.008232 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:35:08.009663 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:35:08.010713 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:35:08.011961 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:35:08.012961 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:35:08.014107 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:35:08.015081 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:35:08.015218 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   Rendered layouts/_sidebar_new.html.erb (7.7ms)
+D, [2019-08-26T10:35:08.015983 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`user_id` = 1[0m
+I, [2019-08-26T10:35:08.016139 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   Rendered favorites/index.html.erb within layouts/application (9.6ms)
+D, [2019-08-26T10:35:08.018348 #16005] DEBUG -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:08.020990 #16005]  INFO -- : [f2bbbeb1-69ee-498c-bfc2-4459be9ab103] Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 4.8ms)
+I, [2019-08-26T10:35:10.014321 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61] Started GET "/users/1" for 220.148.154.162 at 2019-08-26 10:35:10 +0000
+I, [2019-08-26T10:35:10.015090 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61] Processing by UsersController#show as HTML
+I, [2019-08-26T10:35:10.015139 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:35:10.018044 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:35:10.027515 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:10.028847 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   Rendering users/show.html.erb within layouts/application
+I, [2019-08-26T10:35:10.029098 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:10.030728 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:35:10.032040 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:35:10.033083 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:35:10.034352 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:35:10.035383 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:35:10.036339 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:35:10.037293 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:35:10.037431 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   Rendered layouts/_sidebar_new.html.erb (7.5ms)
+D, [2019-08-26T10:35:10.038326 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1 ORDER BY id DESC[0m
+D, [2019-08-26T10:35:10.040007 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:35:10.041896 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:35:10.043252 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1[0m
+I, [2019-08-26T10:35:10.043665 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   Rendered users/show.html.erb within layouts/application (14.7ms)
+D, [2019-08-26T10:35:10.045918 #16005] DEBUG -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:10.048472 #16005]  INFO -- : [91a6c5b1-a6a3-4270-9ac8-5ce4a5c5cc61] Completed 200 OK in 33ms (Views: 14.3ms | ActiveRecord: 15.4ms)
+I, [2019-08-26T10:35:38.522550 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313] Started GET "/idea_boards?utf8=%E2%9C%93&q%5Bhead_cont%5D=%E7%BE%8E%E5%AE%B9" for 220.148.154.162 at 2019-08-26 10:35:38 +0000
+I, [2019-08-26T10:35:38.523391 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313] Processing by IdeaBoardsController#index as HTML
+I, [2019-08-26T10:35:38.523446 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   Parameters: {"utf8"=>"✓", "q"=>{"head_cont"=>"美容"}}
+D, [2019-08-26T10:35:38.526896 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2019-08-26T10:35:38.528545 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   Rendering idea_boards/index.html.erb within layouts/application
+I, [2019-08-26T10:35:38.529556 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:38.530392 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:35:38.531920 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:35:38.532943 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:35:38.534221 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:35:38.535242 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:35:38.536385 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:35:38.537429 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:35:38.537586 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   Rendered layouts/_sidebar_new.html.erb (7.9ms)
+D, [2019-08-26T10:35:38.538578 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`head` LIKE '%美容%' ORDER BY `idea_boards`.`created_at` DESC LIMIT 20 OFFSET 0[0m
+D, [2019-08-26T10:35:38.539597 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:38.541765 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mIdeaBoard Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `idea_boards` INNER JOIN `favorites` ON `idea_boards`.`id` = `favorites`.`idea_board_id` WHERE `favorites`.`user_id` = 1 AND `idea_boards`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:38.542947 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   Rendered favorites/_like_button.html.erb (2.6ms)
+D, [2019-08-26T10:35:38.544085 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:35:38.545928 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+I, [2019-08-26T10:35:38.546801 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   Rendered idea_boards/index.html.erb within layouts/application (18.2ms)
+D, [2019-08-26T10:35:38.549116 #16005] DEBUG -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:38.551658 #16005]  INFO -- : [7f35b7e7-0eaf-481a-ace4-e67817f74313] Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 6.9ms)
+I, [2019-08-26T10:35:40.248200 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31] Started GET "/idea_boards?utf8=%E2%9C%93&q%5Bhead_cont%5D=%E7%BE%8E%E5%AE%B9&commit=%E6%A4%9C%E7%B4%A2" for 220.148.154.162 at 2019-08-26 10:35:40 +0000
+I, [2019-08-26T10:35:40.248996 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31] Processing by IdeaBoardsController#index as HTML
+I, [2019-08-26T10:35:40.249052 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   Parameters: {"utf8"=>"✓", "q"=>{"head_cont"=>"美容"}, "commit"=>"検索"}
+D, [2019-08-26T10:35:40.252046 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2019-08-26T10:35:40.253049 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   Rendering idea_boards/index.html.erb within layouts/application
+I, [2019-08-26T10:35:40.253276 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:40.254113 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T10:35:40.255560 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T10:35:40.256540 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T10:35:40.257878 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T10:35:40.258996 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T10:35:40.260013 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T10:35:40.261112 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T10:35:40.261247 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   Rendered layouts/_sidebar_new.html.erb (7.8ms)
+D, [2019-08-26T10:35:40.262141 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`head` LIKE '%美容%' ORDER BY `idea_boards`.`created_at` DESC LIMIT 20 OFFSET 0[0m
+D, [2019-08-26T10:35:40.263296 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:40.265478 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mIdeaBoard Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `idea_boards` INNER JOIN `favorites` ON `idea_boards`.`id` = `favorites`.`idea_board_id` WHERE `favorites`.`user_id` = 1 AND `idea_boards`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:40.266508 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   Rendered favorites/_like_button.html.erb (2.5ms)
+D, [2019-08-26T10:35:40.267629 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:35:40.269450 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+I, [2019-08-26T10:35:40.270174 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   Rendered idea_boards/index.html.erb within layouts/application (17.1ms)
+D, [2019-08-26T10:35:40.272327 #16005] DEBUG -- : [e75199e6-4ebd-4986-be94-5a144d54bb31]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:40.274864 #16005]  INFO -- : [e75199e6-4ebd-4986-be94-5a144d54bb31] Completed 200 OK in 26ms (Views: 15.8ms | ActiveRecord: 6.9ms)
+I, [2019-08-26T10:35:55.916278 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b] Started GET "/idea_boards/1" for 220.148.154.162 at 2019-08-26 10:35:55 +0000
+I, [2019-08-26T10:35:55.917114 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b] Processing by IdeaBoardsController#show as HTML
+I, [2019-08-26T10:35:55.917177 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b]   Parameters: {"id"=>"1"}
+D, [2019-08-26T10:35:55.919878 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T10:35:55.921023 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mIdeaBoard Load (0.6ms)[0m  [1m[34mSELECT  `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:55.931445 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b]   Rendering idea_boards/show.html.erb within layouts/application
+I, [2019-08-26T10:35:55.932793 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T10:35:55.934056 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2019-08-26T10:35:55.936628 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mIdeaBoard Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `idea_boards` INNER JOIN `favorites` ON `idea_boards`.`id` = `favorites`.`idea_board_id` WHERE `favorites`.`user_id` = 1 AND `idea_boards`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T10:35:55.937806 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b]   Rendered favorites/_like_button.html.erb (2.8ms)
+D, [2019-08-26T10:35:55.939120 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T10:35:55.941016 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T10:35:55.944275 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`idea_board_id` = 1[0m
+I, [2019-08-26T10:35:55.944741 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b]   Rendered idea_boards/show.html.erb within layouts/application (13.2ms)
+D, [2019-08-26T10:35:55.947732 #16005] DEBUG -- : [c976937d-91c6-4285-b455-99256f02860b]   [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:35:55.949763 #16005]  INFO -- : [c976937d-91c6-4285-b455-99256f02860b] Completed 200 OK in 32ms (Views: 14.9ms | ActiveRecord: 6.3ms)
+I, [2019-08-26T10:36:14.839056 #16005]  INFO -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85] Started GET "/" for 220.148.154.162 at 2019-08-26 10:36:14 +0000
+I, [2019-08-26T10:36:14.839910 #16005]  INFO -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85] Processing by HomesController#top as HTML
+I, [2019-08-26T10:36:14.843461 #16005]  INFO -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85]   Rendering homes/top.html.erb within layouts/application
+D, [2019-08-26T10:36:14.845634 #16005] DEBUG -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+I, [2019-08-26T10:36:14.846223 #16005]  INFO -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85]   Rendered homes/top.html.erb within layouts/application (2.7ms)
+D, [2019-08-26T10:36:14.849054 #16005] DEBUG -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T10:36:14.851917 #16005]  INFO -- : [386db0dc-5e4c-48c6-99ac-7085010fcb85] Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 1.4ms)
+I, [2019-08-26T10:58:58.556193 #16005]  INFO -- : [383adeaa-2993-4d1b-95d6-866c04f38f21] Started GET "/muieblackcat" for 95.110.227.199 at 2019-08-26 10:58:58 +0000
+F, [2019-08-26T10:58:58.556846 #16005] FATAL -- : [383adeaa-2993-4d1b-95d6-866c04f38f21]   
+F, [2019-08-26T10:58:58.556888 #16005] FATAL -- : [383adeaa-2993-4d1b-95d6-866c04f38f21] ActionController::RoutingError (No route matches [GET] "/muieblackcat"):
+F, [2019-08-26T10:58:58.556917 #16005] FATAL -- : [383adeaa-2993-4d1b-95d6-866c04f38f21]   
+F, [2019-08-26T10:58:58.556974 #16005] FATAL -- : [383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[383adeaa-2993-4d1b-95d6-866c04f38f21] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T10:58:59.370080 #16005]  INFO -- : [dd31f043-32d2-4542-b1e3-2c7d29759c5f] Started GET "/phpMyAdmin/scripts/setup.php" for 95.110.227.199 at 2019-08-26 10:58:59 +0000
+F, [2019-08-26T10:58:59.370729 #16005] FATAL -- : [dd31f043-32d2-4542-b1e3-2c7d29759c5f]   
+F, [2019-08-26T10:58:59.370784 #16005] FATAL -- : [dd31f043-32d2-4542-b1e3-2c7d29759c5f] ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+F, [2019-08-26T10:58:59.370812 #16005] FATAL -- : [dd31f043-32d2-4542-b1e3-2c7d29759c5f]   
+F, [2019-08-26T10:58:59.370860 #16005] FATAL -- : [dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[dd31f043-32d2-4542-b1e3-2c7d29759c5f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T10:58:59.905004 #16005]  INFO -- : [440d775e-bf5f-4af2-840c-3939c0b2a39f] Started GET "/phpmyadmin/scripts/setup.php" for 95.110.227.199 at 2019-08-26 10:58:59 +0000
+F, [2019-08-26T10:58:59.905652 #16005] FATAL -- : [440d775e-bf5f-4af2-840c-3939c0b2a39f]   
+F, [2019-08-26T10:58:59.905693 #16005] FATAL -- : [440d775e-bf5f-4af2-840c-3939c0b2a39f] ActionController::RoutingError (No route matches [GET] "/phpmyadmin/scripts/setup.php"):
+F, [2019-08-26T10:58:59.905722 #16005] FATAL -- : [440d775e-bf5f-4af2-840c-3939c0b2a39f]   
+F, [2019-08-26T10:58:59.905782 #16005] FATAL -- : [440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[440d775e-bf5f-4af2-840c-3939c0b2a39f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T10:59:00.401353 #16005]  INFO -- : [b8b054ad-ee85-4120-8947-a66a6bbf7050] Started GET "/pma/scripts/setup.php" for 95.110.227.199 at 2019-08-26 10:59:00 +0000
+F, [2019-08-26T10:59:00.402027 #16005] FATAL -- : [b8b054ad-ee85-4120-8947-a66a6bbf7050]   
+F, [2019-08-26T10:59:00.402071 #16005] FATAL -- : [b8b054ad-ee85-4120-8947-a66a6bbf7050] ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+F, [2019-08-26T10:59:00.402102 #16005] FATAL -- : [b8b054ad-ee85-4120-8947-a66a6bbf7050]   
+F, [2019-08-26T10:59:00.402155 #16005] FATAL -- : [b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[b8b054ad-ee85-4120-8947-a66a6bbf7050] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T10:59:00.916780 #16005]  INFO -- : [c2477429-4ea2-4b97-a6db-e63ee018f86b] Started GET "/myadmin/scripts/setup.php" for 95.110.227.199 at 2019-08-26 10:59:00 +0000
+F, [2019-08-26T10:59:00.917418 #16005] FATAL -- : [c2477429-4ea2-4b97-a6db-e63ee018f86b]   
+F, [2019-08-26T10:59:00.917496 #16005] FATAL -- : [c2477429-4ea2-4b97-a6db-e63ee018f86b] ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+F, [2019-08-26T10:59:00.917530 #16005] FATAL -- : [c2477429-4ea2-4b97-a6db-e63ee018f86b]   
+F, [2019-08-26T10:59:00.917570 #16005] FATAL -- : [c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[c2477429-4ea2-4b97-a6db-e63ee018f86b] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T10:59:01.420865 #16005]  INFO -- : [bc831462-0b1f-4e17-87d2-b428ca295d5a] Started GET "/MyAdmin/scripts/setup.php" for 95.110.227.199 at 2019-08-26 10:59:01 +0000
+F, [2019-08-26T10:59:01.421545 #16005] FATAL -- : [bc831462-0b1f-4e17-87d2-b428ca295d5a]   
+F, [2019-08-26T10:59:01.421594 #16005] FATAL -- : [bc831462-0b1f-4e17-87d2-b428ca295d5a] ActionController::RoutingError (No route matches [GET] "/MyAdmin/scripts/setup.php"):
+F, [2019-08-26T10:59:01.421626 #16005] FATAL -- : [bc831462-0b1f-4e17-87d2-b428ca295d5a]   
+F, [2019-08-26T10:59:01.421681 #16005] FATAL -- : [bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[bc831462-0b1f-4e17-87d2-b428ca295d5a] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T13:45:44.316130 #16005]  INFO -- : [fe64f3fe-bbec-4c04-ae13-205c83015784] Started GET "/" for 71.6.158.166 at 2019-08-26 13:45:44 +0000
+I, [2019-08-26T13:45:44.316912 #16005]  INFO -- : [fe64f3fe-bbec-4c04-ae13-205c83015784] Processing by HomesController#top as HTML
+D, [2019-08-26T13:45:44.429192 #16005] DEBUG -- : [fe64f3fe-bbec-4c04-ae13-205c83015784]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-26T13:45:44.430486 #16005]  INFO -- : [fe64f3fe-bbec-4c04-ae13-205c83015784]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-26T13:45:44.434216 #16005]  INFO -- : [fe64f3fe-bbec-4c04-ae13-205c83015784]   Rendered homes/top.html.erb within layouts/application (3.6ms)
+I, [2019-08-26T13:45:44.442206 #16005]  INFO -- : [fe64f3fe-bbec-4c04-ae13-205c83015784] Completed 200 OK in 125ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+I, [2019-08-26T13:45:44.976419 #16005]  INFO -- : [7ddbc93d-1d2d-44c7-983c-bf41f137953c] Started GET "/sitemap.xml" for 71.6.158.166 at 2019-08-26 13:45:44 +0000
+F, [2019-08-26T13:45:44.977021 #16005] FATAL -- : [7ddbc93d-1d2d-44c7-983c-bf41f137953c]   
+F, [2019-08-26T13:45:44.977077 #16005] FATAL -- : [7ddbc93d-1d2d-44c7-983c-bf41f137953c] ActionController::RoutingError (No route matches [GET] "/sitemap.xml"):
+F, [2019-08-26T13:45:44.977109 #16005] FATAL -- : [7ddbc93d-1d2d-44c7-983c-bf41f137953c]   
+F, [2019-08-26T13:45:44.977164 #16005] FATAL -- : [7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[7ddbc93d-1d2d-44c7-983c-bf41f137953c] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T13:45:45.236534 #16005]  INFO -- : [399f6c67-b445-4485-91e7-4b141e69e53e] Started GET "/.well-known/security.txt" for 71.6.158.166 at 2019-08-26 13:45:45 +0000
+F, [2019-08-26T13:45:45.237112 #16005] FATAL -- : [399f6c67-b445-4485-91e7-4b141e69e53e]   
+F, [2019-08-26T13:45:45.237155 #16005] FATAL -- : [399f6c67-b445-4485-91e7-4b141e69e53e] ActionController::RoutingError (No route matches [GET] "/.well-known/security.txt"):
+F, [2019-08-26T13:45:45.237201 #16005] FATAL -- : [399f6c67-b445-4485-91e7-4b141e69e53e]   
+F, [2019-08-26T13:45:45.237252 #16005] FATAL -- : [399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[399f6c67-b445-4485-91e7-4b141e69e53e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[399f6c67-b445-4485-91e7-4b141e69e53e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[399f6c67-b445-4485-91e7-4b141e69e53e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[399f6c67-b445-4485-91e7-4b141e69e53e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[399f6c67-b445-4485-91e7-4b141e69e53e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T13:59:19.845585 #16005]  INFO -- : [836cfa32-b36c-4b3a-809b-05cd647a76a5] Started GET "/manager/html" for 52.77.222.25 at 2019-08-26 13:59:19 +0000
+F, [2019-08-26T13:59:19.846206 #16005] FATAL -- : [836cfa32-b36c-4b3a-809b-05cd647a76a5]   
+F, [2019-08-26T13:59:19.846261 #16005] FATAL -- : [836cfa32-b36c-4b3a-809b-05cd647a76a5] ActionController::RoutingError (No route matches [GET] "/manager/html"):
+F, [2019-08-26T13:59:19.846290 #16005] FATAL -- : [836cfa32-b36c-4b3a-809b-05cd647a76a5]   
+F, [2019-08-26T13:59:19.846328 #16005] FATAL -- : [836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[836cfa32-b36c-4b3a-809b-05cd647a76a5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-26T15:22:06.054252 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9] Started GET "/users/1" for 220.148.154.162 at 2019-08-26 15:22:06 +0000
+I, [2019-08-26T15:22:06.055115 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9] Processing by UsersController#show as HTML
+I, [2019-08-26T15:22:06.055165 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   Parameters: {"id"=>"1"}
+D, [2019-08-26T15:22:06.094192 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+D, [2019-08-26T15:22:06.096112 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2019-08-26T15:22:06.097261 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2019-08-26T15:22:06.098654 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   Rendering users/show.html.erb within layouts/application
+I, [2019-08-26T15:22:06.098920 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   Rendered layouts/_flash_messages.html.erb (0.1ms)
+D, [2019-08-26T15:22:06.100453 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+D, [2019-08-26T15:22:06.101774 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 1[0m
+D, [2019-08-26T15:22:06.102793 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 2[0m
+D, [2019-08-26T15:22:06.104066 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 3[0m
+D, [2019-08-26T15:22:06.104992 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 4[0m
+D, [2019-08-26T15:22:06.106000 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 5[0m
+D, [2019-08-26T15:22:06.106941 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.4ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`genre_id` = 6[0m
+I, [2019-08-26T15:22:06.107069 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   Rendered layouts/_sidebar_new.html.erb (7.3ms)
+D, [2019-08-26T15:22:06.107979 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mIdeaBoard Load (0.5ms)[0m  [1m[34mSELECT `idea_boards`.* FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1 ORDER BY id DESC[0m
+D, [2019-08-26T15:22:06.109755 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT `taggings`.* FROM `taggings` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard'[0m
+D, [2019-08-26T15:22:06.111836 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`taggable_id` = 1 AND `taggings`.`taggable_type` = 'IdeaBoard' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+D, [2019-08-26T15:22:06.113211 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `idea_boards` WHERE `idea_boards`.`user_id` = 1[0m
+I, [2019-08-26T15:22:06.113630 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   Rendered users/show.html.erb within layouts/application (14.9ms)
+D, [2019-08-26T15:22:06.115922 #16005] DEBUG -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9]   [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT `genres`.* FROM `genres`[0m
+I, [2019-08-26T15:22:06.118598 #16005]  INFO -- : [af1cbfdd-12eb-486f-a029-2ab2fb35bbb9] Completed 200 OK in 63ms (Views: 14.7ms | ActiveRecord: 7.0ms)
+I, [2019-08-26T19:09:15.487740 #16005]  INFO -- : [243910fb-1602-46fd-9cee-44a701af6f49] Started GET "/" for 95.9.159.211 at 2019-08-26 19:09:15 +0000
+I, [2019-08-26T19:09:15.488522 #16005]  INFO -- : [243910fb-1602-46fd-9cee-44a701af6f49] Processing by HomesController#top as TEXT
+D, [2019-08-26T19:09:15.597690 #16005] DEBUG -- : [243910fb-1602-46fd-9cee-44a701af6f49]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-26T19:09:15.599376 #16005]  INFO -- : [243910fb-1602-46fd-9cee-44a701af6f49]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-26T19:09:15.600417 #16005]  INFO -- : [243910fb-1602-46fd-9cee-44a701af6f49]   Rendered homes/top.html.erb within layouts/application (1.0ms)
+I, [2019-08-26T19:09:15.602394 #16005]  INFO -- : [243910fb-1602-46fd-9cee-44a701af6f49] Completed 200 OK in 114ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+I, [2019-08-26T20:06:20.413191 #16005]  INFO -- : [0f47166a-3056-4991-a09d-7ee0d7f28a3f] Started GET "/" for 209.17.96.74 at 2019-08-26 20:06:20 +0000
+I, [2019-08-26T20:06:20.413928 #16005]  INFO -- : [0f47166a-3056-4991-a09d-7ee0d7f28a3f] Processing by HomesController#top as */*
+D, [2019-08-26T20:06:20.459897 #16005] DEBUG -- : [0f47166a-3056-4991-a09d-7ee0d7f28a3f]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-26T20:06:20.464012 #16005]  INFO -- : [0f47166a-3056-4991-a09d-7ee0d7f28a3f]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-26T20:06:20.465079 #16005]  INFO -- : [0f47166a-3056-4991-a09d-7ee0d7f28a3f]   Rendered homes/top.html.erb within layouts/application (1.0ms)
+I, [2019-08-26T20:06:20.466993 #16005]  INFO -- : [0f47166a-3056-4991-a09d-7ee0d7f28a3f] Completed 200 OK in 53ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+I, [2019-08-26T23:43:17.720069 #16005]  INFO -- : [f51c8c65-62d9-4716-b755-bc7bbef0b288] Started GET "/" for 196.52.43.57 at 2019-08-26 23:43:17 +0000
+I, [2019-08-26T23:43:17.720821 #16005]  INFO -- : [f51c8c65-62d9-4716-b755-bc7bbef0b288] Processing by HomesController#top as */*
+D, [2019-08-26T23:43:17.830907 #16005] DEBUG -- : [f51c8c65-62d9-4716-b755-bc7bbef0b288]   [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-26T23:43:17.832020 #16005]  INFO -- : [f51c8c65-62d9-4716-b755-bc7bbef0b288]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-26T23:43:17.832514 #16005]  INFO -- : [f51c8c65-62d9-4716-b755-bc7bbef0b288]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-26T23:43:17.834241 #16005]  INFO -- : [f51c8c65-62d9-4716-b755-bc7bbef0b288] Completed 200 OK in 113ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+I, [2019-08-27T00:11:20.343758 #16005]  INFO -- : [859e8a32-8f41-4430-9e9b-63a62bbcfc31] Started GET "/" for 90.221.94.197 at 2019-08-27 00:11:20 +0000
+I, [2019-08-27T00:11:20.344374 #16005]  INFO -- : [859e8a32-8f41-4430-9e9b-63a62bbcfc31] Processing by HomesController#top as HTML
+D, [2019-08-27T00:11:20.351367 #16005] DEBUG -- : [859e8a32-8f41-4430-9e9b-63a62bbcfc31]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T00:11:20.352443 #16005]  INFO -- : [859e8a32-8f41-4430-9e9b-63a62bbcfc31]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T00:11:20.352893 #16005]  INFO -- : [859e8a32-8f41-4430-9e9b-63a62bbcfc31]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T00:11:20.354744 #16005]  INFO -- : [859e8a32-8f41-4430-9e9b-63a62bbcfc31] Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+I, [2019-08-27T01:03:12.356866 #16005]  INFO -- : [74e18468-48c8-435d-8b88-1d4bfb12bf3b] Started GET "/" for 141.223.12.41 at 2019-08-27 01:03:12 +0000
+I, [2019-08-27T01:03:12.357656 #16005]  INFO -- : [74e18468-48c8-435d-8b88-1d4bfb12bf3b] Processing by HomesController#top as */*
+D, [2019-08-27T01:03:12.394799 #16005] DEBUG -- : [74e18468-48c8-435d-8b88-1d4bfb12bf3b]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T01:03:12.396010 #16005]  INFO -- : [74e18468-48c8-435d-8b88-1d4bfb12bf3b]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T01:03:12.396478 #16005]  INFO -- : [74e18468-48c8-435d-8b88-1d4bfb12bf3b]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T01:03:12.398343 #16005]  INFO -- : [74e18468-48c8-435d-8b88-1d4bfb12bf3b] Completed 200 OK in 41ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+I, [2019-08-27T01:17:57.194138 #16005]  INFO -- : [9f276610-a735-4175-bcb3-401d30266e0a] Started GET "/" for 88.232.228.199 at 2019-08-27 01:17:57 +0000
+I, [2019-08-27T01:17:57.194822 #16005]  INFO -- : [9f276610-a735-4175-bcb3-401d30266e0a] Processing by HomesController#top as HTML
+D, [2019-08-27T01:17:57.303958 #16005] DEBUG -- : [9f276610-a735-4175-bcb3-401d30266e0a]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T01:17:57.305133 #16005]  INFO -- : [9f276610-a735-4175-bcb3-401d30266e0a]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T01:17:57.305648 #16005]  INFO -- : [9f276610-a735-4175-bcb3-401d30266e0a]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T01:17:57.307358 #16005]  INFO -- : [9f276610-a735-4175-bcb3-401d30266e0a] Completed 200 OK in 112ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+I, [2019-08-27T02:08:48.287607 #16005]  INFO -- : [9a70855d-08a2-42b5-b051-f48f2149ec7f] Started GET "/" for 128.14.134.134 at 2019-08-27 02:08:48 +0000
+I, [2019-08-27T02:08:48.288378 #16005]  INFO -- : [9a70855d-08a2-42b5-b051-f48f2149ec7f] Processing by HomesController#top as */*
+D, [2019-08-27T02:08:48.325919 #16005] DEBUG -- : [9a70855d-08a2-42b5-b051-f48f2149ec7f]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T02:08:48.327034 #16005]  INFO -- : [9a70855d-08a2-42b5-b051-f48f2149ec7f]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T02:08:48.327491 #16005]  INFO -- : [9a70855d-08a2-42b5-b051-f48f2149ec7f]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T02:08:48.329277 #16005]  INFO -- : [9a70855d-08a2-42b5-b051-f48f2149ec7f] Completed 200 OK in 41ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+I, [2019-08-27T02:57:45.758787 #16005]  INFO -- : [79e5a980-86e1-4667-ab64-6b7aab3ab73e] Started GET "/muieblackcat" for 95.110.227.199 at 2019-08-27 02:57:45 +0000
+F, [2019-08-27T02:57:45.759426 #16005] FATAL -- : [79e5a980-86e1-4667-ab64-6b7aab3ab73e]   
+F, [2019-08-27T02:57:45.759467 #16005] FATAL -- : [79e5a980-86e1-4667-ab64-6b7aab3ab73e] ActionController::RoutingError (No route matches [GET] "/muieblackcat"):
+F, [2019-08-27T02:57:45.759495 #16005] FATAL -- : [79e5a980-86e1-4667-ab64-6b7aab3ab73e]   
+F, [2019-08-27T02:57:45.759532 #16005] FATAL -- : [79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[79e5a980-86e1-4667-ab64-6b7aab3ab73e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-27T02:57:46.258627 #16005]  INFO -- : [49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] Started GET "/phpMyAdmin/scripts/setup.php" for 95.110.227.199 at 2019-08-27 02:57:46 +0000
+F, [2019-08-27T02:57:46.259295 #16005] FATAL -- : [49cc8fd3-04ee-4d58-b731-2cfc1e06d52e]   
+F, [2019-08-27T02:57:46.259338 #16005] FATAL -- : [49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+F, [2019-08-27T02:57:46.259368 #16005] FATAL -- : [49cc8fd3-04ee-4d58-b731-2cfc1e06d52e]   
+F, [2019-08-27T02:57:46.259416 #16005] FATAL -- : [49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[49cc8fd3-04ee-4d58-b731-2cfc1e06d52e] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-27T02:57:46.755472 #16005]  INFO -- : [481e87fe-df77-4e84-9431-1a6f416462eb] Started GET "/phpmyadmin/scripts/setup.php" for 95.110.227.199 at 2019-08-27 02:57:46 +0000
+F, [2019-08-27T02:57:46.756137 #16005] FATAL -- : [481e87fe-df77-4e84-9431-1a6f416462eb]   
+F, [2019-08-27T02:57:46.756180 #16005] FATAL -- : [481e87fe-df77-4e84-9431-1a6f416462eb] ActionController::RoutingError (No route matches [GET] "/phpmyadmin/scripts/setup.php"):
+F, [2019-08-27T02:57:46.756210 #16005] FATAL -- : [481e87fe-df77-4e84-9431-1a6f416462eb]   
+F, [2019-08-27T02:57:46.756253 #16005] FATAL -- : [481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[481e87fe-df77-4e84-9431-1a6f416462eb] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[481e87fe-df77-4e84-9431-1a6f416462eb] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[481e87fe-df77-4e84-9431-1a6f416462eb] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[481e87fe-df77-4e84-9431-1a6f416462eb] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[481e87fe-df77-4e84-9431-1a6f416462eb] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-27T02:57:47.320563 #16005]  INFO -- : [84a535b6-d407-49cb-91a4-87f9843c66f5] Started GET "/pma/scripts/setup.php" for 95.110.227.199 at 2019-08-27 02:57:47 +0000
+F, [2019-08-27T02:57:47.321263 #16005] FATAL -- : [84a535b6-d407-49cb-91a4-87f9843c66f5]   
+F, [2019-08-27T02:57:47.321308 #16005] FATAL -- : [84a535b6-d407-49cb-91a4-87f9843c66f5] ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+F, [2019-08-27T02:57:47.321338 #16005] FATAL -- : [84a535b6-d407-49cb-91a4-87f9843c66f5]   
+F, [2019-08-27T02:57:47.321380 #16005] FATAL -- : [84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[84a535b6-d407-49cb-91a4-87f9843c66f5] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-27T02:57:47.822366 #16005]  INFO -- : [ee05f415-bc8a-483c-b47b-436d1f8bb87f] Started GET "/myadmin/scripts/setup.php" for 95.110.227.199 at 2019-08-27 02:57:47 +0000
+F, [2019-08-27T02:57:47.823061 #16005] FATAL -- : [ee05f415-bc8a-483c-b47b-436d1f8bb87f]   
+F, [2019-08-27T02:57:47.823108 #16005] FATAL -- : [ee05f415-bc8a-483c-b47b-436d1f8bb87f] ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+F, [2019-08-27T02:57:47.823137 #16005] FATAL -- : [ee05f415-bc8a-483c-b47b-436d1f8bb87f]   
+F, [2019-08-27T02:57:47.823178 #16005] FATAL -- : [ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[ee05f415-bc8a-483c-b47b-436d1f8bb87f] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-27T02:57:48.329302 #16005]  INFO -- : [2c02846d-05f6-477f-9379-2a02102a5875] Started GET "/MyAdmin/scripts/setup.php" for 95.110.227.199 at 2019-08-27 02:57:48 +0000
+F, [2019-08-27T02:57:48.329996 #16005] FATAL -- : [2c02846d-05f6-477f-9379-2a02102a5875]   
+F, [2019-08-27T02:57:48.330040 #16005] FATAL -- : [2c02846d-05f6-477f-9379-2a02102a5875] ActionController::RoutingError (No route matches [GET] "/MyAdmin/scripts/setup.php"):
+F, [2019-08-27T02:57:48.330070 #16005] FATAL -- : [2c02846d-05f6-477f-9379-2a02102a5875]   
+F, [2019-08-27T02:57:48.330108 #16005] FATAL -- : [2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `block in call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:28:in `tagged'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/tagged_logging.rb:71:in `tagged'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/rack/logger.rb:26:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/activesupport-5.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/actionpack-5.2.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] vendor/bundle/ruby/2.4/gems/railties-5.2.3/lib/rails/engine.rb:524:in `call'
+[2c02846d-05f6-477f-9379-2a02102a5875] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+[2c02846d-05f6-477f-9379-2a02102a5875] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:152:in `accept_and_process_next_request'
+[2c02846d-05f6-477f-9379-2a02102a5875] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+[2c02846d-05f6-477f-9379-2a02102a5875] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+[2c02846d-05f6-477f-9379-2a02102a5875] /usr/local/share/ruby/gems/2.4/gems/passenger-5.1.12/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+I, [2019-08-27T07:13:36.504065 #16005]  INFO -- : [0f4a5aca-1e69-4ac2-a146-cb2e43b08973] Started GET "/" for 78.185.87.212 at 2019-08-27 07:13:36 +0000
+I, [2019-08-27T07:13:36.504759 #16005]  INFO -- : [0f4a5aca-1e69-4ac2-a146-cb2e43b08973] Processing by HomesController#top as TEXT
+D, [2019-08-27T07:13:36.542094 #16005] DEBUG -- : [0f4a5aca-1e69-4ac2-a146-cb2e43b08973]   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T07:13:36.543134 #16005]  INFO -- : [0f4a5aca-1e69-4ac2-a146-cb2e43b08973]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T07:13:36.543611 #16005]  INFO -- : [0f4a5aca-1e69-4ac2-a146-cb2e43b08973]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T07:13:36.545405 #16005]  INFO -- : [0f4a5aca-1e69-4ac2-a146-cb2e43b08973] Completed 200 OK in 41ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+I, [2019-08-27T07:49:57.691621 #16005]  INFO -- : [f389f778-dabc-4942-b913-46d62b165709] Started GET "/" for 35.233.22.189 at 2019-08-27 07:49:57 +0000
+I, [2019-08-27T07:49:57.692381 #16005]  INFO -- : [f389f778-dabc-4942-b913-46d62b165709] Processing by HomesController#top as */*
+D, [2019-08-27T07:49:57.802698 #16005] DEBUG -- : [f389f778-dabc-4942-b913-46d62b165709]   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T07:49:57.803880 #16005]  INFO -- : [f389f778-dabc-4942-b913-46d62b165709]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T07:49:57.804364 #16005]  INFO -- : [f389f778-dabc-4942-b913-46d62b165709]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T07:49:57.806236 #16005]  INFO -- : [f389f778-dabc-4942-b913-46d62b165709] Completed 200 OK in 114ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+I, [2019-08-27T12:24:45.600144 #16005]  INFO -- : [36193ab6-9515-4347-a174-3d5b82860a3a] Started GET "/" for 47.89.192.12 at 2019-08-27 12:24:45 +0000
+I, [2019-08-27T12:24:45.600845 #16005]  INFO -- : [36193ab6-9515-4347-a174-3d5b82860a3a] Processing by HomesController#top as */*
+D, [2019-08-27T12:24:45.607764 #16005] DEBUG -- : [36193ab6-9515-4347-a174-3d5b82860a3a]   [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4 COLLATE utf8mb4_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2019-08-27T12:24:45.608761 #16005]  INFO -- : [36193ab6-9515-4347-a174-3d5b82860a3a]   Rendering homes/top.html.erb within layouts/application
+I, [2019-08-27T12:24:45.609244 #16005]  INFO -- : [36193ab6-9515-4347-a174-3d5b82860a3a]   Rendered homes/top.html.erb within layouts/application (0.4ms)
+I, [2019-08-27T12:24:45.611071 #16005]  INFO -- : [36193ab6-9515-4347-a174-3d5b82860a3a] Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 0.4ms)
