@@ -100,15 +100,6 @@ h1 {
   background-color: #fbfbfb;
 }
 
-.groove{
-  border: 5px groove #fefefe;
-}
-
-.groove2{
-  border-top: 5px groove #fefefe;
-  border-bottom: 5px groove #fefefe;
-}
-
 .wrapper {
   margin-right: auto;
   margin-left:  auto;
@@ -130,13 +121,6 @@ h1 {
 .profile_head{
   border: solid black 5px;
   margin: 20px 0;
-}
-
-.jumbotron {
-  background-image: url("background.png");
-  background-size: cover;
-  background-position: center 60%;
-  margin:0 0 20px 0;
 }
 
 .genre-head{
@@ -217,7 +201,7 @@ h1 {
     top: 0;
     background: #efefef;
 }
-.comment-box:before, .comment-box:after{ 
+.comment-box:before, .comment-box:after{
     position: absolute;
     top: 0;
     content:'';
