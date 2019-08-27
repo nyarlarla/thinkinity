@@ -17,23 +17,26 @@
             <div class="col-4">
               <%= image_tag '/images/logo.jpg', :size =>'250x250', class: "img-fluid" %>
             </div>
-            <div class="col-6">
-              <div class="row" style="margin-top: 30px">
-                <div class="col-10" style="padding-right: 0px">
-                  <%= search_form_for @search, url: idea_boards_path do |f| %>
-                    <%= f.text_field :head_cont ,placeholder: '検索するテキストを入力...', class: "form-control" %>
-                </div>
-                <div class="col-2" style="padding-left: 0px">
-                    <%= f.submit ("検索") , class: 'btn btn-block btn-secondary'%>
+            <% if user_signed_in? %>
+            <div class="col-6 my-auto">
+              <div class="align-middle">
+                <div class="row">
+                  <div class="col-9 pr-0">
+                    <%= search_form_for @search, url: idea_boards_path do |f| %>
+                      <%= f.text_field :head_or_body_cont ,placeholder: '検索するテキストを入力...', class: "form-control" %>
+                  </div>
+                  <div class="col-3 pl-0">
+                      <%= f.submit ("検索") , class: 'btn btn-block btn-secondary'%>
+                  </div>
                 </div>
                   <% end %>
               </div>
             </div>
-            <% if user_signed_in? %>
-            <div class="col-2" style="margin-top: 30px">
-              <button type="button" data-toggle="modal" data-backdrop="true" data-target="#modal-option" class="btn btn-block btn-primary">
-                投稿する
-              </button>
+            <div class="col-2 my-auto">
+              <div class="align-middle">
+                <button type="button" data-toggle="modal" data-backdrop="true" data-target="#modal-option" class="btn btn-block btn-primary">
+                  投稿
+                </button>
             </div>
             <% end %>
           </div>
@@ -52,53 +55,59 @@
                 <div class="searchbox list-group list-group-horizontal nav-list col-12">
                 <ul class="col-12 navbar-nav mr-auto">
                   <% if user_signed_in? %>
-                    <li class="list-inline-item nav-list-item col-lg-2 py-1">
-                      <i class="fas fa-home"></i>
-                      <%= link_to "Top画面", root_path, class: "nav-text" %>
-                    </li>
-
-                    <li class="list-inline-item nav-list-item col-lg-2 py-1">
-                      <i class="fas fa-info"></i>
-                      <%= link_to "アバウト", home_about_path, class: "nav-text" %>
-                    </li>
-
-                    <li class="list-inline-item nav-list-item col-lg-2 py-1">
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light">
                       <i class="fas fa-user"></i>
                       <%= link_to "マイページ", user_path(current_user.id), class: "nav-text" %>
-                      </%>
                     </li>
 
-                    <li class="list-inline-item nav-list-item col-lg-2 py-1">
-                      <i class="fas fa-book"></i>
-                      <%= link_to "投稿一覧", idea_boards_path, class: "nav-text" %>
-                    </li>
-
-                    <li class="list-inline-item nav-list-item col-lg-2 py-1">
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light">
                       <i class="fas fa-lightbulb"></i>
                       <%= link_to "新着", genres_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item col-lg-2 right-border py-1">
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light border-right">
+                      <i class="fas fa-book"></i>
+                      <%= link_to "投稿一覧", idea_boards_path, class: "nav-text" %>
+                    </li>
+
+                    <li class="list-inline-item nav-list-item col-lg-2 dropdown">
+                      <a class="nav-text nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false"><i class="far fa-folder-open text-white"></i>ジャンル</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <% @genres.each do |genre| %>
+                          <%= link_to genre_path(genre.id) do %>
+                            <p class="dropdown-item"><%= genre.genre_symbol %>
+                            </p>
+                          <% end %>
+                        <% end %>
+                      </div>
+                    </li>
+
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light">
+                      <i class="fas fa-book"></i>
+                      <%= link_to "お気に入り", favorites_path, class: "nav-text" %>
+                    </li>
+
+                    <li class="list-inline-item nav-list-item col-lg-2 right-border my-auto border-left border-light border-right">
                       <i class="fas fa-sign-out-alt"></i>
                       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-text" %>
                     </li>
                   <% else %>
-                      <li class="list-inline-item nav-list-item col-lg-3 py-1">
+                      <li class="list-inline-item nav-list-item col-lg-3 my-auto">
                       <i class="fas fa-home"></i>
                       <%= link_to "ホーム", root_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item col-lg-3 py-1">
+                    <li class="list-inline-item nav-list-item col-lg-3 my-auto">
                       <i class="fas fa-info"></i>
                       <%= link_to "アバウト", home_about_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item col-lg-3 py-1">
+                    <li class="list-inline-item nav-list-item col-lg-3 my-auto">
                       <i class="fas fa-user-circle"></i>
                       <%= link_to "アカウント作成", new_user_registration_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item right-border col-lg-3 py-1">
+                    <li class="list-inline-item nav-list-item right-border col-lg-3 my-auto">
                       <i class="fas fa-sign-in-alt"></i>
                       <%= link_to "ログイン", new_user_session_path, class: "nav-text" %>
                     </li>
@@ -173,24 +182,19 @@
       <div class="footer-head">
         <div class="container">
           <div class="row">
-            <div class="col-5">
+            <div class="col-8">
               <div class="row">
                 <div class="col-4 mb-4 text-center">
                   <div class="text-light pt-3">
-                    <% if user_signed_in? %>
-                      <i class="fas fa-lightbulb"></i>
-                      <%= link_to "新着", genres_path, class: "nav-text" %>
-                    <% else %>
                       <i class="fas fa-home"></i>
                       <%= link_to "ホーム", root_path, class: "nav-text" %>
-                    <% end %>
                   </div>
                 </div>
                 <div class="col-4 mb-4 text-center">
                   <div class="text-light pt-3">
                     <% if user_signed_in? %>
                       <i class="fas fa-book"></i>
-                      <%= link_to "投稿一覧", idea_boards_path, class: "nav-text" %>
+                      <%= link_to "アバウト", home_about_path, class: "nav-text" %>
                     <% else %>
                       <i class="fas fa-sign-in-alt"></i>
                       <%= link_to "ログイン", new_user_session_path, class: "nav-text" %>

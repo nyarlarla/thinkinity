@@ -1,7 +1,7 @@
 <div class="card card-border shadow">
 	<h5 class="text-center card-body card-header text-white">新着投稿</h5>
 	<% @genres.each do |genre| %>
-		<div class="card-body sidehead">
+		<div class="card-body sidehead m-1">
 			<%= link_to genre_path(genre.id) do %>
 				<%= genre.genre_symbol %>
 			<% end %>

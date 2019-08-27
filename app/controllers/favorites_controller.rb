@@ -7,6 +7,7 @@ class FavoritesController < ApplicationController
   end
 
 	def create
+    @genres = Genre.all
     idea_board = IdeaBoard.find(params[:idea_board_id])
     current_user.like(idea_board)
     redirect_back(fallback_location: root_path)

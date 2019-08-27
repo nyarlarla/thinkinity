@@ -4,6 +4,7 @@ before_action :correct_user, only: [:edit, :update]
 
 	def new
 		@idea_board = IdeaBoard.new
+		@genres = Genre.all
 	end
 
 	def create
