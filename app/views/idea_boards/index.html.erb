@@ -20,12 +20,12 @@
 											<td class="text-center" rowspan="2" style="width:20%;">
 												<%= attachment_image_tag idea.user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.png", size:'100x100', class: "profile_image img-fluid" %>
 											</td>
-											<td style="width:60%;">
+											<td style="width:50%;">
 												<%= link_to user_path(idea.user) do %>
 													<h5><%= idea.user.name %></h5>
 												<% end %>
 											</td>
-											<td style="width:20%">
+											<td style="width:30%">
 												<%= render 'favorites/like_button', idea_board: idea %>
 											</td>
 										</tr>

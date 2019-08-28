@@ -1,15 +1,17 @@
 <% if current_user.favpost?(idea_board) %>
   <%= form_for(current_user.favorites.find_by(idea_board_id: idea_board.id), html: { method: :delete }) do |f| %>
     <%= hidden_field_tag :idea_board_id, idea_board.id %>
-	    <%= button_tag :type => "submit", :class =>"btn-fav" do %>
-	  		<i class="far fa-bookmark"></i>
+	    <%= button_tag :type => "submit", :class =>"btn-fav btn-fav-icon" do %>
+	  		<i class="fas fa-heart"></i>
 	  	<% end %>
+	  	お気に入り解除
   	<% end %>
 <% else %>
   <%= form_for(current_user.favorites.build) do |f| %>
     <%= hidden_field_tag :idea_board_id, idea_board.id %>
-	    <%= button_tag :type => "submit", :class =>"btn-fav btn-fav-icon" do %>
-	  		<i class="fas fa-bookmark"></i>
+	    <%= button_tag :type => "submit", :class =>"btn-fav " do %>
+	  		<i class="fas fa-heart"></i>
 		<% end %>
+		お気に入り登録
   <% end %>
 <% end %>
