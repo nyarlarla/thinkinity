@@ -40,7 +40,7 @@
               <div class="col-8">
                 <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
                 <small><strong><%= m.user.name %>さん</a></strong></small>
-                <div class="card card-body col-6">
+                <div class="card card-body messages-box col-12">
                   <strong><%= m.content %></strong>
                 </div>
               </div>
@@ -51,11 +51,15 @@
             <div class="row">
               <div class="col-4">
               </div>
-              <div class="col-8">
-                <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
-                <small><strong><%= m.user.name %>さん</a></strong></small>
-                <div class="card card-body col-6">
-                  <strong><%= m.content %></strong>
+              <div class="col-8 clearfix">
+                <div class="float-right clearfix">
+                  <div class="float-right">
+                    <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
+                    <small><strong><%= m.user.name %>さん</a></strong></small>
+                  </div>
+                  <div class="card card-body messages-box col-12">
+                    <strong><%= m.content %></strong>
+                  </div>
                 </div>
               </div>
             </div>
