@@ -92,22 +92,22 @@
                       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-text" %>
                     </li>
                   <% else %>
-                      <li class="list-inline-item nav-list-item col-lg-3 my-auto">
+                      <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light">
                       <i class="fas fa-home"></i>
                       <%= link_to "ホーム", root_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item col-lg-3 my-auto">
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light">
                       <i class="fas fa-info"></i>
                       <%= link_to "アバウト", home_about_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item col-lg-3 my-auto">
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light">
                       <i class="fas fa-user-circle"></i>
                       <%= link_to "アカウント作成", new_user_registration_path, class: "nav-text" %>
                     </li>
 
-                    <li class="list-inline-item nav-list-item right-border col-lg-3 my-auto">
+                    <li class="list-inline-item nav-list-item col-lg-2 my-auto border-left border-light border-right">
                       <i class="fas fa-sign-in-alt"></i>
                       <%= link_to "ログイン", new_user_session_path, class: "nav-text" %>
                     </li>
