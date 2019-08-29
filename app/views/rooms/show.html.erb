@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container py-5">
   <div class="card card-border">
     <div class="card text-center card-header">
       <h3 class="text-white">DM</h3>
@@ -21,6 +21,7 @@
           </table>
         </div>
     <% end %>
+  </div>
 
     <div class="mt-4">
       <%= form_for @message do |f| %>
@@ -38,13 +39,15 @@
           <% if m.user.id == current_user.id %>
             <div class="row">
               <div class="col-8">
-                <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
-                <small><strong><%= m.user.name %>さん</strong></small>
-                <div class="card card-body messages-box col-12">
-                  <strong><%= m.content %></strong>
+                <div class="m-2">
+                  <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
+                  <small><strong><%= m.user.name %>さん</strong></small>
+                  <div class="card card-body messages-box col-12">
+                    <strong><%= m.content %></strong>
+                  </div>
+                  </div>
+                  <div class="col-4">
                 </div>
-              </div>
-              <div class="col-4">
               </div>
             </div>
           <% else %>
@@ -52,8 +55,8 @@
 
               <div class="col-4">
               </div>
-
               <div class="col-8 clearfix">
+                <div class="m-2">
                   <div class="float-right">
                     <%= attachment_image_tag m.user, :image, :fill, 25, 25, format: 'jpeg', fallback: "no_image.png", size:'25x25', class: "profile_image" %>
                     <small><strong><%= m.user.name %>さん</strong></small>
@@ -61,8 +64,8 @@
                   <div class="card card-body messages-box col-12">
                     <strong><%= m.content %></strong>
                   </div>
+                </div>
               </div>
-
             </div>
           <% end %>
         <% end %>
