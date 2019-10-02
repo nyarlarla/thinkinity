@@ -53,11 +53,11 @@ before_action :correct_user, only: [:edit, :update]
 
 	def destroy
 		@idea_board = IdeaBoard.find(params[:id])
-		if @idea_board.destroy(idea_board_params)
-			redirect_to user_path(current_user.id)
+		if @idea_board.destroy
+			redirect_to user_path(current_user)
 		else
-    		redirect_to user_path(current_user.id)
-    	end
+			redirect_to user_path(current_user)
+		end
 	end
 
 	private

@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
 	attachment :image
 
-	has_many :favorites
+	has_many :favorites, dependent: :destroy
   	has_many :favposts, through: :favorites, source: :idea_board
 
   	has_many :messages, dependent: :destroy
